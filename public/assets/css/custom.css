@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fff;
+    font-family: "Poppins", sans-serif;
+}
+.main-wrapper {
+    width: 100%;
+    height: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.custom-container {
+    width: 1280px !important;
+    margin: 0 auto;
+}
+.custom-row {
+}
+.cus-col-first {
+    width: 136px;
+    float: left;
+}
+.cus-col-second {
+    width: 1080px;
+    float: left;
+}
+.cus-col-third {
+    width: 190px;
+    float: right;
+    margin-right: -100px;
+}
+
+#header {
+    height: 90vh;
+    padding: 30px 0;
+    text-align: center;
+}
+.header-content {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.header-content .icon {
+    margin-left: 10%;
+}
+.header-content .menu {
+    position: absolute;
+    top: 42%;
+    right: 20%;
+    cursor: pointer;
+}
+
+.menu .menu-icon {
+    transform: rotate(-90deg);
+    margin-bottom: 50px;
+}
+.menu .menu-icon .first-icon {
+    height: 3px;
+    background: black;
+    width: 30px;
+}
+.menu .menu-icon .second-icon {
+    height: 3px;
+    width: 15px;
+    background: black;
+    margin-top: 5px;
+}
+.menu .menu-text {
+    transform: rotate(-90deg);
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.04em;
+    color: #000;
+    font-style: normal;
+}
+.header-content .title {
+    transform: rotate(-90deg);
+    position: absolute;
+    bottom: 4%;
+    left: 12%;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.04em;
+    color: #000;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+/*================ main content ===================== */
+.main-content {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.main-content .background-video {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    object-fit: cover;
+    top: 61px;
+    left: 0;
+    bottom: 0;
+    height: 80vh;
+    box-shadow: 2px 2px 20px 10px #c9c6c6;
+}
+
+/*================ footer ============================*/
+#footer {
+    height: 90vh;
+    padding: 30px 0;
+    text-align: center;
+}
+.footer-content {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.footer-content .icon {
+    margin-left: 15px;
+}
+.footer-content .menu {
+    position: absolute;
+    top: 42%;
+    right: 34%;
+}
+
+.footer-content .language {
+    transform: rotate(90deg);
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.04em;
+    color: #000;
+    font-style: normal;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+.footer-content .language .bn {
+    font-weight: 200;
+    cursor: pointer;
+}
+.footer-content .language .en {
+    cursor: pointer;
+}
+
+.menu .menu-icon {
+    transform: rotate(-90deg);
+    margin-bottom: 50px;
+}
+.menu .menu-icon .first-icon {
+    height: 3px;
+    background: black;
+    width: 30px;
+}
+.menu .menu-icon .second-icon {
+    height: 3px;
+    width: 15px;
+    background: black;
+    margin-top: 5px;
+}
+.menu .menu-text {
+    transform: rotate(-90deg);
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.04em;
+    color: #000;
+    font-style: normal;
+}
+.footer-content .title {
+    transform: rotate(90deg);
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.04em;
+    color: #000;
+    font-style: normal;
+    width: 100%;
+    text-transform: uppercase;
+}
