@@ -32,6 +32,8 @@ body {
     margin-right: -100px;
 }
 
+/*===================== header ===============*/
+
 #header {
     height: 90vh;
     padding: 30px 0;
@@ -60,12 +62,25 @@ body {
     height: 3px;
     background: black;
     width: 30px;
+    cursor: pointer;
+    transition: width 0.5s;
 }
+
+.header-content .menu:hover .first-icon {
+    width: 15px;
+}
+
 .menu .menu-icon .second-icon {
     height: 3px;
     width: 15px;
     background: black;
     margin-top: 5px;
+    cursor: pointer;
+    transition: width 0.5s;
+}
+
+.header-content .menu:hover .second-icon {
+    width: 30px;
 }
 .menu .menu-text {
     transform: rotate(-90deg);
@@ -120,11 +135,68 @@ body {
 .footer-content .icon {
     margin-left: 15px;
 }
-.footer-content .menu {
+.footer-content .page-number {
     position: absolute;
     top: 42%;
-    right: 34%;
+    right: 45%;
 }
+.footer-content .page-number .first-page .first-page-number {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 175%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #000000;
+}
+.footer-content .page-number .first-page-dot,
+.second-page-dot,
+.third-page-dot,
+.fourth-page-dot,
+.fifth-page-dot,
+.sixth-page-dot {
+    width: 10px;
+    height: 10px;
+    background: #000;
+    border-radius: 50%;
+    margin-left: 12px;
+}
+.active-page-dot {
+    background: #8f00ff !important;
+    box-shadow: 0px 3px 3px 0px #adaaaa;
+}
+.active-page-line {
+    box-shadow: 0px 3px 3px 0px #adaaaa;
+}
+
+.footer-content .page-number .first-page-line,
+.second-page-line,
+.third-page-line,
+.fourth-page-line,
+.fifth-page-line,
+.sixth-page-line {
+    margin-left: 2px;
+    width: 30px;
+    height: 1px;
+    background: #000;
+    transform: rotate(90deg);
+    margin-top: 20px;
+}
+.page-distance {
+    margin-bottom: -17px;
+}
+.active-page-distance {
+    margin-bottom: 20px;
+}
+.page-num-hide {
+    display: none;
+}
+.line-hide {
+    width: 0;
+}
+/* .page-dot-distance {
+    margin-top: 20px;
+} */
 
 .footer-content .language {
     transform: rotate(90deg);

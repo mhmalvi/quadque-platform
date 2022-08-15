@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserPageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('user.layout.master');
-});
+Route::get('/', [UserPageController::class, 'home'])->name('home');
+Route::get('/start-project', [UserPageController::class, 'startProject'])->name('startProject');

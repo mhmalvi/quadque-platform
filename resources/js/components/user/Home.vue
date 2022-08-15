@@ -21,16 +21,13 @@
 <script>
 import VTypical from "vue-typical";
 export default {
-  name: "Home",
   components: {
     VTypical,
   },
   data() {
     return {};
   },
-  mounted() {
-    console.log("Component mounted.");
-  },
+  mounted() {},
 };
 </script>
 <style scoped>

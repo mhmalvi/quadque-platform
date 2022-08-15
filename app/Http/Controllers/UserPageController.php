@@ -1,0 +1,20 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class UserPageController extends Controller
+{
+    //get the user home page
+    public function home()
+    {
+        return view('user.home');
+    }
+
+    //get the start project page
+    public function startProject()
+    {
+        return view('user.start-project');
+    }
+}

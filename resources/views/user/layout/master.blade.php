@@ -20,7 +20,9 @@
                     </div>
                     <div class="cus-col-second">
                         <div id="app">
-                           <Home/>
+
+                          @yield('content')
+                         
                         </div>
                     </div>
                     <div class="cus-col-third">
