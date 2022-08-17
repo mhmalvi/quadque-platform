@@ -24,6 +24,10 @@ Vue.component(
     "startproject-component",
     require("./components/user/startProject.vue").default
 );
+Vue.component(
+    "customers-component",
+    require("./components/user/customers.vue").default
+);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

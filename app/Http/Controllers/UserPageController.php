@@ -17,4 +17,10 @@ class UserPageController extends Controller
     {
         return view('user.start-project');
     }
+
+    //get the start project page
+    public function customers()
+    {
+        return view('user.customers');
+    }
 }

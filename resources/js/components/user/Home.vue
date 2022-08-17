@@ -33,31 +33,31 @@ export default {
 <style scoped>
 .video-text {
   position: absolute;
-  top: 500px;
-  right: 300px;
+  top: 40rem;
+  right: 32rem;
 }
 .video-text h1 {
   font-style: normal;
   font-weight: 700;
-  font-size: 48px;
-  line-height: 45px;
+  font-size: 4.8rem;
+  line-height: 4.5rem;
   text-transform: capitalize;
   color: #ffffff;
-  width: 100px;
+  width: 10rem;
 }
 .video-text a {
   font-weight: 500;
-  font-size: 14px;
-  line-height: 21px;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
   text-transform: capitalize;
   color: #ffffff;
   text-decoration: none;
 }
 .video-text a img {
   vertical-align: middle;
-  margin-left: 10px;
-  width: 15px;
-  height: 15px;
+  margin-left: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 </style>
 

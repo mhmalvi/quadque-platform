@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link href="{{ mix('css/app.css') }}" type="text/css" rel="stylesheet" />
     <link href="{{ asset('assets/css/custom.css')}}" type="text/css" rel="stylesheet" />
+    <link href="{{ asset('assets/css/mediaQuery.css')}}" type="text/css" rel="stylesheet" />
 
 </head>
 <body>

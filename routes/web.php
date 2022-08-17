@@ -16,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [UserPageController::class, 'home'])->name('home');
 Route::get('/start-project', [UserPageController::class, 'startProject'])->name('startProject');
+Route::get('/customers', [UserPageController::class, 'customers'])->name('customers');
