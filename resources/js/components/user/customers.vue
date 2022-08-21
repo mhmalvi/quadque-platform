@@ -183,7 +183,7 @@ export default {};
     left: 47.9rem;
   }
   .icon-box {
-    height: 10rem;
+    height: 10.5rem;
     margin-bottom: 3.5rem;
   }
   .customers-icon-group-two {

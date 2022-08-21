@@ -23,4 +23,14 @@ class UserPageController extends Controller
     {
         return view('user.customers');
     }
+    //get the case study page
+    public function caseStudy()
+    {
+        return view('user.caseStudy');
+    }
+    //get the case study page
+    public function work()
+    {
+        return view('user.work');
+    }
 }

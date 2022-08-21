@@ -28,6 +28,11 @@ Vue.component(
     "customers-component",
     require("./components/user/customers.vue").default
 );
+Vue.component(
+    "casestudy-component",
+    require("./components/user/caseStudy.vue").default
+);
+Vue.component("work-component", require("./components/user/work.vue").default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
