@@ -14,25 +14,30 @@ body {
     margin-bottom: 0rem;
 }
 .custom-container {
-    width: 90% !important;
+    width: 100% !important;
     margin: 0 auto;
+    position: relative;
 }
 
 .cus-col-first {
-    width: 12%;
-    float: left;
+    width: 5%;
     height: 100vh;
+    position: fixed;
+    left: 0%;
 }
 .cus-col-second {
-    width: 74%;
-    float: left;
+    width: 90%;
+    position: fixed;
+    left: 5%;
+    top: 5%;
 }
 .cus-col-third {
-    width: 12%;
+    width: 10%;
     height: 100vh;
-    float: right;
     margin-right: 4%;
     height: 100vh;
+    position: fixed;
+    left: 93%;
 }
 
 /*===================== header ===============*/
@@ -49,12 +54,14 @@ body {
     position: relative;
 }
 .header-content .icon {
-    margin-left: 20%;
+    position: absolute;
+    top: 0%;
+    left: 30%;
 }
 .header-content .menu {
     position: absolute;
-    top: 40%;
-    right: 20%;
+    top: 45%;
+    right: 0%;
     cursor: pointer;
 }
 
@@ -93,41 +100,41 @@ body {
     letter-spacing: 0.04em;
     color: #000;
     font-style: normal;
+    text-transform: uppercase;
 }
 .header-content .title {
     transform: rotate(-90deg);
     position: absolute;
-    top: 90%;
-    left: 25%;
+    top: 95%;
+    left: -30px;
     font-weight: 600;
     font-size: 1.9rem;
     letter-spacing: 0.04em;
     color: #000;
     font-style: normal;
     text-transform: uppercase;
+    /* height: 102px; */
+    width: 162px;
+}
+.header-content .title span {
+    margin-right: 5px;
+}
+.header-content .title span a {
+    text-decoration: none;
+    color: #000;
+}
+.header-content .title span a:first-child {
+    margin-right: -5px;
 }
 
 /*================ main content ===================== */
 .main-content {
-    height: 100%;
-    width: 100%;
-    position: relative;
-    top: 0%;
-    left: 0%;
-    right: 0%;
-    bottom: 0%;
+    height: 90vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
-.main-content .background-video {
-    width: 100%;
-    position: absolute;
-    height: 100%;
-    object-fit: cover;
-    top: 6.1rem;
-    left: 0;
-    bottom: 0;
-    height: 80vh;
-    box-shadow: 1px 1px 20px 10px #c9c6c6;
-    border: 0.25px solid #ffffff;
+.main-content::-webkit-scrollbar {
+    display: none;
 }
 
 /*================ footer ============================*/
@@ -146,10 +153,10 @@ body {
 }
 .footer-content .page-number {
     position: absolute;
-    top: 36%;
+    top: 40%;
     right: 45%;
 }
-.footer-content .page-number .first-page .first-page-number {
+.footer-content .page-number .page_number {
     font-style: normal;
     font-weight: 300;
     font-size: 1.6rem;
@@ -157,22 +164,29 @@ body {
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: #000000;
+    transition: all 0.5s ease;
 }
 .footer-content .page-number .first-page-dot,
 .second-page-dot,
 .third-page-dot,
 .fourth-page-dot,
 .fifth-page-dot,
-.sixth-page-dot {
+.sixth-page-dot,
+.seven-page-dot,
+.eight-page-dot,
+.nine-page-dot,
+.ten-page-dot {
     width: 1rem;
     height: 1rem;
     background: #000;
     border-radius: 50%;
     margin-left: 1.2rem;
+    transition: all 0.5s ease;
 }
 .active-page-dot {
     background: #8f00ff !important;
     box-shadow: 0rem 0.3rem 0.3rem 0rem #adaaaa;
+    transition: all 0.5s ease;
 }
 .active-page-line {
     box-shadow: 0rem 0.3rem 0.3rem 0rem #adaaaa;
@@ -183,25 +197,33 @@ body {
 .third-page-line,
 .fourth-page-line,
 .fifth-page-line,
-.sixth-page-line {
+.sixth-page-line,
+.seven-page-line,
+.eight-page-line,
+.nine-page-line,
+.ten-page-line {
     margin-left: 0.2rem;
     width: 3rem;
     height: 0.1rem;
     background: #000;
     transform: rotate(90deg);
     margin-top: 2rem;
+    transition: all 0.5s ease;
 }
 .page-distance {
-    margin-bottom: -1.7rem;
+    margin-bottom: 5px;
 }
 .active-page-distance {
     margin-bottom: 2rem;
 }
 .page-num-hide {
     display: none;
+    transition: all 0.5s ease;
 }
 .line-hide {
     width: 0;
+    display: none;
+    transition: all 0.5s ease;
 }
 
 .footer-content .language {
@@ -211,7 +233,8 @@ body {
     letter-spacing: 0.04em;
     color: #000;
     font-style: normal;
-    margin-top: 3rem;
+    margin-top: 2rem;
+    margin-right: 16px;
     text-transform: uppercase;
 }
 .footer-content .language .bn {
@@ -248,7 +271,7 @@ body {
 .footer-content .title {
     transform: rotate(90deg);
     position: absolute;
-    bottom: 10%;
+    bottom: 1%;
     right: 5%;
     font-weight: 600;
     font-size: 1.9rem;

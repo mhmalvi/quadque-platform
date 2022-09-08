@@ -3,36 +3,56 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
+import axios from "axios";
 
 require("./bootstrap");
 
 window.Vue = require("vue").default;
 
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
+import MarqueeText from "vue-marquee-text-component";
 
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+/* import the fontawesome core */
+import { library } from "@fortawesome/fontawesome-svg-core";
+
+/* import font awesome icon component */
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+
+import {
+    faTwitter,
+    faFacebookF,
+    faYoutube,
+    faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
+
+/* add icons to the library */
+library.add(faTwitter, faFacebookF, faYoutube, faInstagram);
+
+Vue.component("marquee-text", MarqueeText);
+
+/* add font awesome icon component */
+Vue.component("font-awesome-icon", FontAwesomeIcon);
 
 Vue.component("home-component", require("./components/user/Home.vue").default);
 Vue.component(
-    "startproject-component",
-    require("./components/user/startProject.vue").default
+    "login-component",
+    require("./components/admin/login.vue").default
 );
 Vue.component(
-    "customers-component",
-    require("./components/user/customers.vue").default
+    "signup-component",
+    require("./components/admin/signup.vue").default
 );
 Vue.component(
     "casestudy-component",
-    require("./components/user/caseStudy.vue").default
+    require("./components/admin/casestudy.vue").default
 );
-Vue.component("work-component", require("./components/user/work.vue").default);
+Vue.component(
+    "adminblog-component",
+    require("./components/admin/blog.vue").default
+);
+Vue.component(
+    "dashboard-component",
+    require("./components/admin/dashboard.vue").default
+);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
