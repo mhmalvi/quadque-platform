@@ -10,6 +10,7 @@ require("./bootstrap");
 window.Vue = require("vue").default;
 
 import MarqueeText from "vue-marquee-text-component";
+import DynamicMarquee from "vue-dynamic-marquee";
 
 /* import the fontawesome core */
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -28,6 +29,7 @@ import {
 library.add(faTwitter, faFacebookF, faYoutube, faInstagram);
 
 Vue.component("marquee-text", MarqueeText);
+Vue.component("dynamic-marquee", DynamicMarquee);
 
 /* add font awesome icon component */
 Vue.component("font-awesome-icon", FontAwesomeIcon);
@@ -62,4 +64,88 @@ Vue.component(
 
 const app = new Vue({
     el: "#app",
+
+    /*  data: {
+        inMove: false,
+        activeSection: 0,
+        offsets: [],
+        touchStartY: 0,
+    },
+    methods: {
+        calculateSectionOffsets() {
+            let sections = document.getElementsByTagName("section");
+            let length = sections.length;
+            for (let i = 0; i < length; i++) {
+                let sectionOffset = sections[i].offsetTop;
+                this.offsets.push(sectionOffset);
+            }
+        },
+
+        handleMouseWheel: function (e) {
+            if (e.wheelDelta < 30 && !this.inMove) {
+                this.moveUp();
+            } else if (e.wheelDelta > 30 && !this.inMove) {
+                this.moveDown();
+            }
+
+            e.preventDefault();
+            return false;
+        },
+        handleMouseWheelDOM: function (e) {
+            if (e.detail > 0 && !this.inMove) {
+                this.moveUp();
+            } else if (e.detail < 0 && !this.inMove) {
+                this.moveDown();
+            }
+
+            return false;
+        },
+        scrollToSection(id, force = false) {
+            if (this.inMove && !force) return false;
+
+            this.activeSection = id;
+            this.inMove = true;
+
+            document.getElementsByTagName("section")[id].scrollIntoView({
+                behavior: "smooth",
+            });
+
+            setTimeout(() => {
+                this.inMove = false;
+            }, 400);
+        },
+        moveDown() {
+            this.inMove = true;
+            this.activeSection--;
+
+            if (this.activeSection < 0)
+                this.activeSection = this.offsets.length - 1;
+
+            this.scrollToSection(this.activeSection, true);
+        },
+        moveUp() {
+            this.inMove = true;
+            this.activeSection++;
+
+            if (this.activeSection > this.offsets.length - 1)
+                this.activeSection = 0;
+
+            this.scrollToSection(this.activeSection, true);
+        },
+    },
+    created() {
+        this.calculateSectionOffsets();
+        window.addEventListener("DOMMouseScroll", this.handleMouseWheelDOM); // Mozilla Firefox
+        window.addEventListener("mousewheel", this.handleMouseWheel, {
+            passive: false,
+        }); // Other browsers
+    },
+    destroyed() {
+        window.removeEventListener("mousewheel", this.handleMouseWheel, {
+            passive: false,
+        }); // Other browsers
+        window.removeEventListener("DOMMouseScroll", this.handleMouseWheelDOM); // Mozilla Firefox
+    }, */
 });
+
+app.use(VueFullPage);

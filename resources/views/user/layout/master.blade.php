@@ -9,7 +9,8 @@
     <link rel="icon" type="image/x-icon" href="{{ asset('assets/img/icon.png') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link href="{{ asset('css/app.css') }}" type="text/css" rel="stylesheet" />
-    {{-- <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/fullpage.css')}}" /> --}}
+    
+
     <link href="{{ asset('assets/css/custom.css')}}" type="text/css" rel="stylesheet" />
     <link href="{{ asset('assets/css/responsiveFont.css')}}" type="text/css" rel="stylesheet" />
     <link href="{{ asset('assets/css/responsiveLayout.css')}}" type="text/css" rel="stylesheet" />
@@ -38,7 +39,7 @@
         <div class="main-wrapper">
             <div class="custom-container">
                 <div class="custom-row">
-                    <div class="cus-col-first">
+                    <div class="cus-col-first d-none d-xl-block">
                         @include('user.components.header')
                     </div>
                     <div class="cus-col-second">
@@ -50,7 +51,8 @@
                          
                         </div>
                     </div>
-                    <div class="cus-col-third">
+                    <div class="cus-col-third  d-none d-xl-block">
+
                              @include('user.components.footer')
                        
                     </div>
@@ -72,7 +74,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="{{ asset('assets/js/fullpage/fullpage.js') }}"></script> --}}
   <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-  
+
+
 
     <script>
   
@@ -80,6 +83,13 @@
 
     
    /*$('#fullpage').fullpage(); */
+
+   // Returns width of browser viewport
+   windowHeight = $( window ).height();
+   console.log(windowHeight)
+
+   if(windowHeight > 870 ){
+
    $('.main-content').scroll(function () {
 
     let topHeight = $('.main-content').scrollTop();
@@ -292,6 +302,233 @@
 
 
    });
+}
+
+
+
+ if(windowHeight > 800 && windowHeight < 860){
+
+    $('.main-content').scroll(function () {
+
+        let topHeight = $('.main-content').scrollTop();
+      
+             if(topHeight == 0){
+
+                    $('.second-page').removeClass('active-page-distance');
+                    $('.second-page-number').addClass('page-num-hide');
+                    $('.second-page-dot').removeClass('active-page-dot');
+                    $('.second-page-line').addClass('line-hide');
+
+
+                    $('.first-page').addClass('active-page-distance');
+                    $('.first-page-number').removeClass('page-num-hide');
+                    $('.first-page-dot').addClass('active-page-dot');
+                    $('.first-page-line').removeClass('line-hide');
+
+
+             }
+
+             if(topHeight >= 1 && topHeight <= 765){ 
+                    $('.first-page').removeClass('active-page-distance');
+                     $('.first-page-number').addClass('page-num-hide'); 
+                     $('.first-page-dot').removeClass('active-page-dot');
+                     $('.first-page-line').addClass('line-hide');
+                     $('.second-page').addClass('active-page-distance');
+                     $('.second-page-number').removeClass('page-num-hide'); 
+                     $('.second-page-dot').addClass('active-page-dot'); 
+                     $('.second-page-line').removeClass('line-hide'); 
+                     $('.third-page').removeClass('active-page-distance');
+                     $('.third-page-number').addClass('page-num-hide');
+                     $('.third-page-dot').removeClass('active-page-dot');
+                     $('.third-page-line').addClass('line-hide');
+            } 
+            if(topHeight >= 780 && topHeight <= 1530){
+                    $('.second-page').removeClass('active-page-distance');
+                    $('.second-page-number').addClass('page-num-hide'); 
+                    $('.second-page-dot').removeClass('active-page-dot');
+                    $('.second-page-line').addClass('line-hide'); 
+                    $('.third-page').addClass('active-page-distance');
+                    $('.third-page-number').removeClass('page-num-hide');
+                    $('.third-page-dot').addClass('active-page-dot'); 
+                    $('.third-page-line').removeClass('line-hide'); 
+                    $('.fourth-page').removeClass('active-page-distance');
+                    $('.fourth-page-number').addClass('page-num-hide'); 
+                    $('.fourth-page-dot').removeClass('active-page-dot'); 
+                    $('.fourth-page-line').addClass('line-hide');
+            }
+            if(topHeight>= 1531 && topHeight <= 2295){
+                    $('.third-page').removeClass('active-page-distance');
+                    $('.third-page-number').addClass('page-num-hide');
+                    $('.third-page-dot').removeClass('active-page-dot'); 
+                    $('.third-page-line').addClass('line-hide');
+                    $('.fourth-page').addClass('active-page-distance'); 
+                    $('.fourth-page-number').removeClass('page-num-hide'); 
+                    $('.fourth-page-dot').addClass('active-page-dot');
+                    $('.fourth-page-line').removeClass('line-hide');
+                    $('.fifth-page').removeClass('active-page-distance'); 
+                    $('.fifth-page-number').addClass('page-num-hide'); 
+                    $('.fifth-page-dot').removeClass('active-page-dot'); 
+                    $('.fifth-page-line').addClass('line-hide');
+            }
+            if(topHeight>= 2296 && topHeight <= 3060){ 
+                
+                    $('.fourth-page').removeClass('active-page-distance');
+                    $('.fourth-page-number').addClass('page-num-hide'); 
+                    $('.fourth-page-dot').removeClass('active-page-dot');
+                    $('.fourth-page-line').addClass('line-hide');
+                    $('.fifth-page').addClass('active-page-distance');
+                    $('.fifth-page-number').removeClass('page-num-hide');
+                    $('.fifth-page-dot').addClass('active-page-dot');
+                    $('.fifth-page-line').removeClass('line-hide');
+                    $('.sixth-page').removeClass('active-page-distance');
+                    $('.sixth-page-number').addClass('page-num-hide');
+                    $('.sixth-page-dot').removeClass('active-page-dot'); 
+                    $('.sixth-page-line').addClass('line-hide'); 
+                
+                }
+            if(topHeight>= 3061 && topHeight <= 3825 ){ 
+                    $('.fifth-page').removeClass('active-page-distance'); 
+                    $('.fifth-page-number').addClass('page-num-hide'); 
+                    $('.fifth-page-dot').removeClass('active-page-dot');
+                    $('.fifth-page-line').addClass('line-hide');
+                    $('.sixth-page').addClass('active-page-distance');
+                    $('.sixth-page-number').removeClass('page-num-hide');
+                    $('.sixth-page-dot').addClass('active-page-dot');
+                    $('.sixth-page-line').removeClass('line-hide');
+                    $('.seven-page').removeClass('active-page-distance');
+                    $('.seven-page-number').addClass('page-num-hide'); 
+                    $('.seven-page-dot').removeClass('active-page-dot'); 
+                    $('.seven-page-line').addClass('line-hide');
+                                
+            }
+            if(topHeight>= 3826 && topHeight <= 4590 ){ 
+                    $('.sixth-page').removeClass('active-page-distance');
+                    $('.sixth-page-number').addClass('page-num-hide'); 
+                    $('.sixth-page-dot').removeClass('active-page-dot'); 
+                    $('.sixth-page-line').addClass('line-hide'); 
+                    $('.seven-page').addClass('active-page-distance'); 
+                    $('.seven-page-number').removeClass('page-num-hide');
+                    $('.seven-page-dot').addClass('active-page-dot'); 
+                    $('.seven-page-line').removeClass('line-hide');
+                    $('.eight-page').removeClass('active-page-distance'); 
+                    $('.eight-page-number').addClass('page-num-hide');
+                    $('.eight-page-dot').removeClass('active-page-dot');
+                    $('.eight-page-line').addClass('line-hide');
+            
+            } 
+            if(topHeight>= 4591 && topHeight <= 5355){
+
+                    $('.seven-page').removeClass('active-page-distance'); $('.seven-page-number').addClass('page-num-hide');
+                    $('.seven-page-dot').removeClass('active-page-dot'); $('.seven-page-line').addClass('line-hide');
+                    $('.eight-page').addClass('active-page-distance'); $('.eight-page-number').removeClass('page-num-hide');
+                    $('.eight-page-dot').addClass('active-page-dot'); $('.eight-page-line').removeClass('line-hide');
+                    $('.nine-page').removeClass('active-page-distance'); $('.nine-page-number').addClass('page-num-hide');
+                    $('.nine-page-dot').removeClass('active-page-dot'); $('.nine-page-line').addClass('line-hide'); 
+                        
+            } 
+
+            if(topHeight>= 5356 && topHeight <= 6120){ 
+                        
+                    $('.eight-page').removeClass('active-page-distance'); 
+                    $('.eight-page-number').addClass('page-num-hide'); $('.eight-page-dot').removeClass('active-page-dot');
+                    $('.eight-page-line').addClass('line-hide'); $('.nine-page').addClass('active-page-distance');
+                    $('.nine-page-number').removeClass('page-num-hide'); $('.nine-page-dot').addClass('active-page-dot'); 
+                    $('.nine-page-line').removeClass('line-hide'); $('.ten-page').removeClass('active-page-distance');
+                    $('.ten-page-number').addClass('page-num-hide'); $('.ten-page-dot').removeClass('active-page-dot');
+                    $('.ten-page-line').addClass('line-hide'); 
+
+            } 
+            if(topHeight>= 6122 && topHeight <= 7885){ 
+
+                $('.nine-page').removeClass('active-page-distance');
+                $('.nine-page-number').addClass('page-num-hide'); $('.nine-page-dot').removeClass('active-page-dot');
+                $('.nine-page-line').addClass('line-hide'); $('.ten-page').addClass('active-page-distance'); 
+                $('.ten-page-number').removeClass('page-num-hide'); $('.ten-page-dot').addClass('active-page-dot'); 
+                $('.ten-page-line').removeClass('line-hide'); 
+
+         }
+
+
+   
+    })
+
+
+}
+
+ 
+
+
+    //change page number dot at 722 pixel
+    if(windowHeight >= 660 && windowHeight <= 730){
+   
+        $('.main-content').scroll(function () {
+
+        let topHeight = $('.main-content').scrollTop();
+
+        if(topHeight == 0){
+
+        $('.second-page').removeClass('active-page-distance');
+        $('.second-page-number').addClass('page-num-hide');
+        $('.second-page-dot').removeClass('active-page-dot');
+        $('.second-page-line').addClass('line-hide');
+
+
+        $('.first-page').addClass('active-page-distance');
+        $('.first-page-number').removeClass('page-num-hide');
+        $('.first-page-dot').addClass('active-page-dot');
+        $('.first-page-line').removeClass('line-hide');
+
+
+        }
+
+        if(topHeight >= 2 && topHeight <= 650){ $('.first-page').removeClass('active-page-distance'); $('.first-page-number').addClass('page-num-hide'); $('.first-page-dot').removeClass('active-page-dot'); $('.first-page-line').addClass('line-hide'); $('.second-page').addClass('active-page-distance'); $('.second-page-number').removeClass('page-num-hide'); $('.second-page-dot').addClass('active-page-dot'); $('.second-page-line').removeClass('line-hide'); $('.third-page').removeClass('active-page-distance'); $('.third-page-number').addClass('page-num-hide'); $('.third-page-dot').removeClass('active-page-dot'); $('.third-page-line').addClass('line-hide'); } if(topHeight>= 652 && topHeight <= 1300){ $('.second-page').removeClass('active-page-distance'); $('.second-page-number').addClass('page-num-hide'); $('.second-page-dot').removeClass('active-page-dot'); $('.second-page-line').addClass('line-hide'); $('.third-page').addClass('active-page-distance'); $('.third-page-number').removeClass('page-num-hide'); $('.third-page-dot').addClass('active-page-dot'); $('.third-page-line').removeClass('line-hide'); $('.fourth-page').removeClass('active-page-distance'); $('.fourth-page-number').addClass('page-num-hide'); $('.fourth-page-dot').removeClass('active-page-dot'); $('.fourth-page-line').addClass('line-hide'); } if(topHeight>= 1302 && topHeight <= 1949){ $('.third-page').removeClass('active-page-distance'); $('.third-page-number').addClass('page-num-hide'); $('.third-page-dot').removeClass('active-page-dot'); $('.third-page-line').addClass('line-hide'); $('.fourth-page').addClass('active-page-distance'); $('.fourth-page-number').removeClass('page-num-hide'); $('.fourth-page-dot').addClass('active-page-dot'); $('.fourth-page-line').removeClass('line-hide'); $('.fifth-page').removeClass('active-page-distance'); $('.fifth-page-number').addClass('page-num-hide'); $('.fifth-page-dot').removeClass('active-page-dot'); $('.fifth-page-line').addClass('line-hide'); } if(topHeight>= 1951 && topHeight <= 2599){ $('.fourth-page').removeClass('active-page-distance'); $('.fourth-page-number').addClass('page-num-hide'); $('.fourth-page-dot').removeClass('active-page-dot'); $('.fourth-page-line').addClass('line-hide'); $('.fifth-page').addClass('active-page-distance'); $('.fifth-page-number').removeClass('page-num-hide'); $('.fifth-page-dot').addClass('active-page-dot'); $('.fifth-page-line').removeClass('line-hide'); $('.sixth-page').removeClass('active-page-distance'); $('.sixth-page-number').addClass('page-num-hide'); $('.sixth-page-dot').removeClass('active-page-dot'); $('.sixth-page-line').addClass('line-hide'); } if(topHeight>= 2601 && topHeight <= 3249 ){ $('.fifth-page').removeClass('active-page-distance'); $('.fifth-page-number').addClass('page-num-hide'); $('.fifth-page-dot').removeClass('active-page-dot'); $('.fifth-page-line').addClass('line-hide'); $('.sixth-page').addClass('active-page-distance'); $('.sixth-page-number').removeClass('page-num-hide'); $('.sixth-page-dot').addClass('active-page-dot'); $('.sixth-page-line').removeClass('line-hide'); $('.seven-page').removeClass('active-page-distance'); $('.seven-page-number').addClass('page-num-hide'); $('.seven-page-dot').removeClass('active-page-dot'); $('.seven-page-line').addClass('line-hide'); } if(topHeight>= 3251 && topHeight <= 3899 ){ $('.sixth-page').removeClass('active-page-distance'); $('.sixth-page-number').addClass('page-num-hide'); $('.sixth-page-dot').removeClass('active-page-dot'); $('.sixth-page-line').addClass('line-hide'); $('.seven-page').addClass('active-page-distance'); $('.seven-page-number').removeClass('page-num-hide'); $('.seven-page-dot').addClass('active-page-dot'); $('.seven-page-line').removeClass('line-hide'); $('.eight-page').removeClass('active-page-distance'); $('.eight-page-number').addClass('page-num-hide'); $('.eight-page-dot').removeClass('active-page-dot'); $('.eight-page-line').addClass('line-hide'); } if(topHeight>= 3900 && topHeight <= 4549){ $('.seven-page').removeClass('active-page-distance'); $('.seven-page-number').addClass('page-num-hide'); $('.seven-page-dot').removeClass('active-page-dot'); $('.seven-page-line').addClass('line-hide'); $('.eight-page').addClass('active-page-distance'); $('.eight-page-number').removeClass('page-num-hide'); $('.eight-page-dot').addClass('active-page-dot'); $('.eight-page-line').removeClass('line-hide'); $('.nine-page').removeClass('active-page-distance'); $('.nine-page-number').addClass('page-num-hide'); $('.nine-page-dot').removeClass('active-page-dot'); $('.nine-page-line').addClass('line-hide'); } if(topHeight>= 4551 && topHeight <= 5198){ $('.eight-page').removeClass('active-page-distance'); $('.eight-page-number').addClass('page-num-hide'); $('.eight-page-dot').removeClass('active-page-dot'); $('.eight-page-line').addClass('line-hide'); $('.nine-page').addClass('active-page-distance'); $('.nine-page-number').removeClass('page-num-hide'); $('.nine-page-dot').addClass('active-page-dot'); $('.nine-page-line').removeClass('line-hide'); $('.ten-page').removeClass('active-page-distance'); $('.ten-page-number').addClass('page-num-hide'); $('.ten-page-dot').removeClass('active-page-dot'); $('.ten-page-line').addClass('line-hide'); } if(topHeight>= 5200 && topHeight <= 5848){ $('.nine-page').removeClass('active-page-distance'); $('.nine-page-number').addClass('page-num-hide'); $('.nine-page-dot').removeClass('active-page-dot'); $('.nine-page-line').addClass('line-hide'); $('.ten-page').addClass('active-page-distance'); $('.ten-page-number').removeClass('page-num-hide'); $('.ten-page-dot').addClass('active-page-dot'); $('.ten-page-line').removeClass('line-hide'); }
+
+
+
+
+
+
+    });
+    }
+    //change page number dot at 657 pixel
+    if(windowHeight >= 600 && windowHeight <= 660){
+   
+        $('.main-content').scroll(function () {
+
+        let topHeight = $('.main-content').scrollTop();
+      
+
+        if(topHeight == 0){
+
+        $('.second-page').removeClass('active-page-distance');
+        $('.second-page-number').addClass('page-num-hide');
+        $('.second-page-dot').removeClass('active-page-dot');
+        $('.second-page-line').addClass('line-hide');
+
+
+        $('.first-page').addClass('active-page-distance');
+        $('.first-page-number').removeClass('page-num-hide');
+        $('.first-page-dot').addClass('active-page-dot');
+        $('.first-page-line').removeClass('line-hide');
+
+
+        }
+
+        if(topHeight >= 2 && topHeight <= 591){ $('.first-page').removeClass('active-page-distance'); $('.first-page-number').addClass('page-num-hide'); $('.first-page-dot').removeClass('active-page-dot'); $('.first-page-line').addClass('line-hide'); $('.second-page').addClass('active-page-distance'); $('.second-page-number').removeClass('page-num-hide'); $('.second-page-dot').addClass('active-page-dot'); $('.second-page-line').removeClass('line-hide'); $('.third-page').removeClass('active-page-distance'); $('.third-page-number').addClass('page-num-hide'); $('.third-page-dot').removeClass('active-page-dot'); $('.third-page-line').addClass('line-hide'); } if(topHeight>= 593 && topHeight <= 1183){ $('.second-page').removeClass('active-page-distance'); $('.second-page-number').addClass('page-num-hide'); $('.second-page-dot').removeClass('active-page-dot'); $('.second-page-line').addClass('line-hide'); $('.third-page').addClass('active-page-distance'); $('.third-page-number').removeClass('page-num-hide'); $('.third-page-dot').addClass('active-page-dot'); $('.third-page-line').removeClass('line-hide'); $('.fourth-page').removeClass('active-page-distance'); $('.fourth-page-number').addClass('page-num-hide'); $('.fourth-page-dot').removeClass('active-page-dot'); $('.fourth-page-line').addClass('line-hide'); } if(topHeight>= 1185 && topHeight <= 1774){ $('.third-page').removeClass('active-page-distance'); $('.third-page-number').addClass('page-num-hide'); $('.third-page-dot').removeClass('active-page-dot'); $('.third-page-line').addClass('line-hide'); $('.fourth-page').addClass('active-page-distance'); $('.fourth-page-number').removeClass('page-num-hide'); $('.fourth-page-dot').addClass('active-page-dot'); $('.fourth-page-line').removeClass('line-hide'); $('.fifth-page').removeClass('active-page-distance'); $('.fifth-page-number').addClass('page-num-hide'); $('.fifth-page-dot').removeClass('active-page-dot'); $('.fifth-page-line').addClass('line-hide'); } if(topHeight>= 1176 && topHeight <= 2365){ $('.fourth-page').removeClass('active-page-distance'); $('.fourth-page-number').addClass('page-num-hide'); $('.fourth-page-dot').removeClass('active-page-dot'); $('.fourth-page-line').addClass('line-hide'); $('.fifth-page').addClass('active-page-distance'); $('.fifth-page-number').removeClass('page-num-hide'); $('.fifth-page-dot').addClass('active-page-dot'); $('.fifth-page-line').removeClass('line-hide'); $('.sixth-page').removeClass('active-page-distance'); $('.sixth-page-number').addClass('page-num-hide'); $('.sixth-page-dot').removeClass('active-page-dot'); $('.sixth-page-line').addClass('line-hide'); } if(topHeight>= 2367 && topHeight <= 2956 ){ $('.fifth-page').removeClass('active-page-distance'); $('.fifth-page-number').addClass('page-num-hide'); $('.fifth-page-dot').removeClass('active-page-dot'); $('.fifth-page-line').addClass('line-hide'); $('.sixth-page').addClass('active-page-distance'); $('.sixth-page-number').removeClass('page-num-hide'); $('.sixth-page-dot').addClass('active-page-dot'); $('.sixth-page-line').removeClass('line-hide'); $('.seven-page').removeClass('active-page-distance'); $('.seven-page-number').addClass('page-num-hide'); $('.seven-page-dot').removeClass('active-page-dot'); $('.seven-page-line').addClass('line-hide'); } if(topHeight>= 2958 && topHeight <= 3548 ){ $('.sixth-page').removeClass('active-page-distance'); $('.sixth-page-number').addClass('page-num-hide'); $('.sixth-page-dot').removeClass('active-page-dot'); $('.sixth-page-line').addClass('line-hide'); $('.seven-page').addClass('active-page-distance'); $('.seven-page-number').removeClass('page-num-hide'); $('.seven-page-dot').addClass('active-page-dot'); $('.seven-page-line').removeClass('line-hide'); $('.eight-page').removeClass('active-page-distance'); $('.eight-page-number').addClass('page-num-hide'); $('.eight-page-dot').removeClass('active-page-dot'); $('.eight-page-line').addClass('line-hide'); } if(topHeight>= 3550 && topHeight <= 4139){ $('.seven-page').removeClass('active-page-distance'); $('.seven-page-number').addClass('page-num-hide'); $('.seven-page-dot').removeClass('active-page-dot'); $('.seven-page-line').addClass('line-hide'); $('.eight-page').addClass('active-page-distance'); $('.eight-page-number').removeClass('page-num-hide'); $('.eight-page-dot').addClass('active-page-dot'); $('.eight-page-line').removeClass('line-hide'); $('.nine-page').removeClass('active-page-distance'); $('.nine-page-number').addClass('page-num-hide'); $('.nine-page-dot').removeClass('active-page-dot'); $('.nine-page-line').addClass('line-hide'); } if(topHeight>= 4141 && topHeight <= 4730){ $('.eight-page').removeClass('active-page-distance'); $('.eight-page-number').addClass('page-num-hide'); $('.eight-page-dot').removeClass('active-page-dot'); $('.eight-page-line').addClass('line-hide'); $('.nine-page').addClass('active-page-distance'); $('.nine-page-number').removeClass('page-num-hide'); $('.nine-page-dot').addClass('active-page-dot'); $('.nine-page-line').removeClass('line-hide'); $('.ten-page').removeClass('active-page-distance'); $('.ten-page-number').addClass('page-num-hide'); $('.ten-page-dot').removeClass('active-page-dot'); $('.ten-page-line').addClass('line-hide'); } if(topHeight>= 4732 && topHeight <= 5322){ $('.nine-page').removeClass('active-page-distance'); $('.nine-page-number').addClass('page-num-hide'); $('.nine-page-dot').removeClass('active-page-dot'); $('.nine-page-line').addClass('line-hide'); $('.ten-page').addClass('active-page-distance'); $('.ten-page-number').removeClass('page-num-hide'); $('.ten-page-dot').addClass('active-page-dot'); $('.ten-page-line').removeClass('line-hide'); }
+
+
+
+
+
+
+    });
+    }
+
+
+
+
+
+
 
 
 
@@ -305,6 +542,7 @@
       $('#menu').css('z-index','10');
 
       })
+
       $('.cancel-menu').click(function(){
       $('#menu').css('display', 'none');
       $('#menu').css('transition', 'all 1s');

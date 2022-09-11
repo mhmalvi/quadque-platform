@@ -18,9 +18,11 @@
 
                         01
                         </div>
-                        <div class="first-page-dot active-page-dot  page_dot">
+                      
+                            <a href="#home" class="d-block" title="Hero">
+                              <div class="first-page-dot active-page-dot  page_dot"> </div>
+                            </a>
 
-                        </div>
                         <div class="first-page-line  page_line">
 
 
@@ -35,15 +37,22 @@
 
                         02
                         </div>
-                        <div class="second-page-dot page-dot-distance page_dot">
+                       
+                               <a href="#category" class="d-block" title="Category">
+
+                                <div class="second-page-dot page-dot-distance page_dot"></div>
 
 
-                        </div>
+                               </a>
+
+
+                        
                         <div class="second-page-line line-hide page_line">
 
                         </div>
                    </div>
                    <div class="third-page page-distance">
+
 
 
                         <div class="third-page-number page-num-hide  page_number">
@@ -52,10 +61,14 @@
 
                         03
                         </div>
+                         <a href="#customer" class="d-block" title="Customer">
+
+
                         <div class="third-page-dot page-dot-distance page_dot">
 
 
                         </div>
+                        </a>
                         <div class="third-page-line line-hide page_line">
 
 
@@ -70,9 +83,13 @@
 
                         04
                         </div>
+                          <a href="#about" class="d-block" title="About">
+
+
                         <div class="fourth-page-dot page_dot">
 
                         </div>
+                        </a>
                         <div class="fourth-page-line line-hide  page_line">
 
 
@@ -87,9 +104,13 @@
 
                         05
                         </div>
+                          <a href="#caseStudy" class="d-block" title="Case Study">
+
+
                         <div class="fifth-page-dot page_dot">
 
                         </div>
+                        </a>
                         <div class="fifth-page-line line-hide page_line">
 
 
@@ -104,9 +125,13 @@
 
                         06
                         </div>
+                          <a href="#testimonial" class="d-block" title="Testimonial">
+
+
                         <div class="sixth-page-dot page_dot">
 
                         </div>
+                        </a>
                         <div class="sixth-page-line line-hide page_line">
 
 
@@ -121,9 +146,13 @@
 
                         07
                         </div>
+                          <a href="#media" class="d-block" title="Media">
+
+
                         <div class="seven-page-dot page_dot">
 
                         </div>
+                        </a>
                         <div class="seven-page-line line-hide page_line">
 
 
@@ -138,9 +167,13 @@
 
                         08
                         </div>
+                          <a href="#blog" class="d-block" title="Blog">
+
+
                         <div class="eight-page-dot page_dot">
 
                         </div>
+                        </a>
                         <div class="eight-page-line line-hide page_line">
 
 
@@ -155,9 +188,13 @@
 
                         09
                         </div>
+                          <a href="#startProject" class="d-block" title="Start Project">
+
+
                         <div class="nine-page-dot page_dot">
 
                         </div>
+                        </a>
                         <div class="nine-page-line line-hide page_line">
 
 
@@ -172,9 +209,13 @@
 
                         10
                         </div>
+                          <a href="#contact" class="d-block" title="Contact">
+
+
                         <div class="ten-page-dot page_dot">
 
                         </div>
+                        </a>
                         <div class="ten-page-line line-hide page_line">
 
                         </div>

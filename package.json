@@ -30,6 +30,8 @@
         "@fortawesome/free-solid-svg-icons": "^6.2.0",
         "@fortawesome/vue-fontawesome": "^2.0.8",
         "vue-axios": "^3.4.1",
+        "vue-dynamic-marquee": "^0.1.7",
+        "vue-fullpage": "^2.0.5",
         "vue-marquee-text-component": "^1.2.0",
         "vue-typical": "^2.1.0"
     }

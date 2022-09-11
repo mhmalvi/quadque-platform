@@ -1,5 +1,7 @@
 <template>
   <div class="main-content">
+    <!-- Desktop and Laptop version-->
+
     <!-- menu  -->
     <div id="menu">
       <div class="logo">
@@ -121,7 +123,7 @@
     </div>
     <!-- end menu -->
 
-    <section id="home" class="section">
+    <section id="home" class="section d-none d-xl-block">
       <video class="background-video" autoplay loop muted>
         <source :src="'assets/bg-video/header-video-3.mp4'" type="video/mp4" />
       </video>
@@ -138,11 +140,13 @@
         /></a>
       </div>
     </section>
-    <section id="category" class="section">
+    <section id="category" class="section d-none d-xl-block">
       <div class="category-content">
         <div class="category-content-body">
           <div class="ping-row">
-            <div class="ping"></div>
+            <div>
+              <a class="ping d-inline-block" href="#startProject"></a>
+            </div>
           </div>
           <div class="category-bg"></div>
           <h1>ui/ux</h1>
@@ -167,11 +171,13 @@
         </div>
       </div>
     </section>
-    <section id="customer" class="section">
+    <section id="customer" class="section d-none d-xl-block">
       <div class="customer-content">
         <div class="customer-content-body">
           <div class="ping-row">
-            <div class="ping"></div>
+            <div>
+              <a class="ping d-inline-block" href="#startProject"></a>
+            </div>
           </div>
           <div class="customers-text">
             <h1>
@@ -182,65 +188,74 @@
               business problems We create premium web design.
             </p>
           </div>
-          <div class="customers-icon-group-one">
-            <div class="icon-box">
-              <img :src="'assets/img/microsoft.png'" />
+          <dynamic-marquee class="customers-icon-group-one">
+            <div>
+              <div class="icon-box">
+                <img :src="'assets/img/microsoft.png'" />
+              </div>
+              <div class="icon-box">
+                <img :src="'assets/img/tesla.png'" />
+              </div>
+              <div class="icon-box">
+                <img :src="'assets/img/microsoft.png'" />
+              </div>
+              <div class="icon-box">
+                <img :src="'assets/img/tesla.png'" />
+              </div>
+              <div class="icon-box">
+                <img :src="'assets/img/microsoft.png'" />
+              </div>
             </div>
-            <div class="icon-box">
-              <img :src="'assets/img/tesla.png'" />
+          </dynamic-marquee>
+          <dynamic-marquee class="customers-icon-group-two" :reverse="true">
+            <div>
+              <div class="icon-box">
+                <img :src="'assets/img/spotify.png'" />
+              </div>
+              <div class="icon-box">
+                <img :src="'assets/img/google.png'" />
+              </div>
+              <div class="icon-box">
+                <img :src="'assets/img/spotify.png'" />
+              </div>
+              <div class="icon-box">
+                <img :src="'assets/img/google.png'" />
+              </div>
+              <div class="icon-box">
+                <img :src="'assets/img/spotify.png'" />
+              </div>
             </div>
-            <div class="icon-box">
-              <img :src="'assets/img/microsoft.png'" />
+          </dynamic-marquee>
+
+          <dynamic-marquee class="customers-icon-group-three">
+            <div>
+              <div class="icon-box">
+                <img :src="'assets/img/yassir.png'" />
+              </div>
+              <div class="icon-box">
+                <img :src="'assets/img/tiktok.png'" />
+              </div>
+              <div class="icon-box">
+                <img :src="'assets/img/yassir.png'" />
+              </div>
+              <div class="icon-box">
+                <img :src="'assets/img/tiktok.png'" />
+              </div>
+              <div class="icon-box">
+                <img :src="'assets/img/yassir.png'" />
+              </div>
             </div>
-            <div class="icon-box">
-              <img :src="'assets/img/tesla.png'" />
-            </div>
-            <div class="icon-box">
-              <img :src="'assets/img/microsoft.png'" />
-            </div>
-          </div>
-          <div class="customers-icon-group-two">
-            <div class="icon-box">
-              <img :src="'assets/img/spotify.png'" />
-            </div>
-            <div class="icon-box">
-              <img :src="'assets/img/google.png'" />
-            </div>
-            <div class="icon-box">
-              <img :src="'assets/img/spotify.png'" />
-            </div>
-            <div class="icon-box">
-              <img :src="'assets/img/google.png'" />
-            </div>
-            <div class="icon-box">
-              <img :src="'assets/img/spotify.png'" />
-            </div>
-          </div>
-          <div class="customers-icon-group-three">
-            <div class="icon-box">
-              <img :src="'assets/img/yassir.png'" />
-            </div>
-            <div class="icon-box">
-              <img :src="'assets/img/tiktok.png'" />
-            </div>
-            <div class="icon-box">
-              <img :src="'assets/img/yassir.png'" />
-            </div>
-            <div class="icon-box">
-              <img :src="'assets/img/tiktok.png'" />
-            </div>
-            <div class="icon-box">
-              <img :src="'assets/img/yassir.png'" />
-            </div>
-          </div>
+          </dynamic-marquee>
         </div>
       </div>
     </section>
-    <section id="about" class="section">
+    <section id="about" class="section d-none d-xl-block">
       <div class="about-content">
         <div class="about-content-body">
           <div class="ping-row">
-            <div class="ping"></div>
+            <div>
+              <a class="ping d-inline-block" href="#startProject"></a>
+            </div>
           </div>
           <div class="first-section-bg"></div>
           <div class="first-section-gradient"></div>
@@ -340,11 +355,13 @@
         </div>
       </div>
     </section>
-    <section id="caseStudy" class="section">
+    <section id="caseStudy" class="section d-none d-xl-block">
       <div class="case-study-content">
         <div class="case-study-content-body">
           <div class="ping-row">
-            <div class="ping"></div>
+            <div>
+              <a class="ping d-inline-block" href="#startProject"></a>
+            </div>
           </div>
           <div class="case-study-main-content">
             <div class="row row-1">
@@ -406,11 +423,13 @@
         </div>
       </div>
     </section>
-    <section id="testimonial" class="section">
+    <section id="testimonial" class="section d-none d-xl-block">
       <div class="testimonials-content">
         <div class="testimonials-content-body">
           <div class="ping-row">
-            <div class="ping"></div>
+            <div>
+              <a class="ping d-inline-block" href="#startProject"></a>
+            </div>
           </div>
 
           <div class="first-section">
@@ -442,7 +461,7 @@
         </div>
       </div>
     </section>
-    <section id="media" class="section">
+    <section id="media" class="section d-none d-xl-block">
       <div class="media-content">
         <div class="media-content-body">
           <div class="media-bg">
@@ -461,7 +480,7 @@
         </div>
       </div>
     </section>
-    <section id="blog" class="section">
+    <section id="blog" class="section d-none d-xl-block">
       <div class="work-content">
         <div class="work-content-body">
           <div class="first-section">
@@ -515,11 +534,13 @@
         </div>
       </div>
     </section>
-    <section id="startProject" class="section">
+    <section id="startProject" class="section d-none d-xl-block">
       <div class="project-content">
         <div class="project-content-body">
           <div class="ping-row">
-            <div class="ping"></div>
+            <div>
+              <a class="ping d-inline-block" href="#startProject"></a>
+            </div>
           </div>
           <div class="content-area">
             <div class="header">
@@ -587,7 +608,7 @@
         </div>
       </div>
     </section>
-    <section id="contact" class="section">
+    <section id="contact" class="section d-none d-xl-block">
       <div class="contact-content">
         <div class="contact-content-body">
           <div class="logo">
@@ -677,6 +698,9 @@
         </div>
       </div>
     </section>
+
+    <!-- Mobile version of QuadQue Tech Laravel Vue version-->
+    <section id="mobile-home"></section>
   </div>
 </template>
 
@@ -684,11 +708,13 @@
 import axios from "axios";
 import VTypical from "vue-typical";
 import MarqueeText from "vue-marquee-text-component";
+import DynamicMarquee from "vue-dynamic-marquee";
 export default {
   props: ["caseStudyFirstRows", "caseStudySecondRows", "blogsInfo"],
   components: {
     VTypical,
     MarqueeText,
+    DynamicMarquee,
   },
   data() {
     return {
@@ -700,10 +726,19 @@ export default {
       blogs: "",
       blogDate: "",
       seeMore: 1,
+      reverse: true,
+      speed: {
+        type: "duration",
+        number: 100000,
+      },
     };
   },
 
   methods: {
+    // Called when your components are ready. That is up to you to decide when.
+    componentsReady() {
+      this.$refs.fullpage.init();
+    },
     //show menu text after hover
 
     hideMenu() {
@@ -827,6 +862,7 @@ export default {
 }
 .section {
   scroll-snap-align: center;
+  height: 100vh;
 }
 #home {
   height: 100%;
@@ -1167,6 +1203,7 @@ export default {
   outline: 0.1rem solid #fff;
   border: 0.5rem solid #000;
   z-index: 1;
+  cursor: pointer;
 }
 #category .category-bg {
   position: absolute;
@@ -1303,6 +1340,7 @@ export default {
   margin-right: 3rem;
   outline: 0.1rem solid #fff;
   border: 0.5rem solid #000;
+  cursor: pointer;
 }
 #customer .customers-text {
   position: absolute;
@@ -1334,19 +1372,25 @@ export default {
   color: #ffffff;
 }
 #customer .customers-icon-group-one {
-  position: absolute;
-  right: 61.9rem;
-  top: 0.55rem;
+  position: absolute !important;
+  right: 78.9rem !important;
+  top: 0 !important;
+  overflow: visible !important;
+  width: auto !important;
 }
 #customer .customers-icon-group-two {
-  position: absolute;
-  right: 38rem;
-  top: 2rem;
+  position: absolute !important;
+  right: 55rem !important;
+  top: 0 !important;
+  overflow: visible !important;
+  width: auto !important;
 }
 #customer .customers-icon-group-three {
-  position: absolute;
-  right: 14rem;
-  top: 0.55rem;
+  position: absolute !important;
+  right: 31rem !important;
+  top: 0.55rem !important;
+  overflow: visible !important;
+  width: auto !important;
 }
 #customer .icon-box {
   width: 20rem;
@@ -1395,6 +1439,7 @@ export default {
   margin-right: 3rem;
   outline: 0.1rem solid #fff;
   border: 0.5rem solid #000;
+  cursor: pointer;
 }
 
 #caseStudy .row-1 {
@@ -1544,6 +1589,7 @@ export default {
   margin-right: 3rem;
   outline: 0.1rem solid #fff;
   border: 0.5rem solid #000;
+  cursor: pointer;
 }
 #testimonial .first-section {
   width: 40%;
@@ -1681,6 +1727,7 @@ export default {
   margin-right: 3rem;
   outline: 0.1rem solid #fff;
   border: 0.5rem solid #000;
+  cursor: pointer;
 }
 
 @keyframes load {
@@ -2083,6 +2130,7 @@ export default {
   outline: 0.1rem solid #fff;
   border: 0.5rem solid #000;
   z-index: 1;
+  cursor: pointer;
 }
 #media .media-bg {
   position: absolute;
@@ -2173,6 +2221,7 @@ export default {
   margin-right: 3rem;
   outline: 0.1rem solid #fff;
   border: 0.5rem solid #000;
+  cursor: pointer;
 }
 #about .first-section-bg {
   position: absolute;
@@ -2452,6 +2501,7 @@ export default {
   margin-right: 3rem;
   outline: 0.1rem solid #fff;
   border: 0.5rem solid #000;
+  cursor: pointer;
 }
 #contact .logo img {
   position: absolute;
@@ -2590,56 +2640,51 @@ export default {
 /************** responsive  **************/
 
 @media screen and (max-width: 1600px) {
-  /*   #home,
-  #category,
-  #caseStudy,
-  #testimonial,
-  #startProject,
-  #blog,
-  #media,
-  #about,
-  #contact,
-  #customer {
-    margin-bottom: 2%;
-  } */
   #menu .about a {
     left: 590px;
   }
   #home .video-text {
-    top: 58rem;
+    top: 40rem;
   }
   #blog .work-content-body {
     top: 0px;
   }
   #customer .customers-icon-group-one {
-    right: 64.9rem;
+    right: 81rem !important;
   }
   #customer .customers-icon-group-two {
-    position: absolute;
-    left: 75.4rem;
-    top: 3rem;
+    right: 56rem !important;
   }
-  #customer .customers-icon-group-three {
-    position: absolute;
-    left: 102.8rem;
-    top: 0.55rem;
+  #testimonial .first-section .quotation-img[data-v-1b29d588] {
+    margin-top: 1rem;
+    margin-left: 1rem;
+  }
+  #customer .customers-text {
+    top: 30rem;
   }
   #customer .icon-box {
-    width: 25rem;
-    height: 18rem;
-    line-height: 3rem;
+    width: 22rem;
+    height: 16rem;
   }
   #customer .icon-box img {
-    transform: translate(3.5rem, 7.5rem);
+    margin-left: 4px;
+    transform: translate(3.5rem, 6.5rem);
   }
-  #customer .icon-box img {
-    margin-left: 12px;
-  }
+
   #blog .fourth-section .fourth-section-title {
-    margin-top: 24rem;
+    margin-top: 12rem;
   }
   #contact .logo img {
     left: 77%;
+  }
+  #caseStudy .case-study-box {
+    width: 160px;
+  }
+  #caseStudy .more-company[data-v-1b29d588] {
+    margin-top: 4%;
+  }
+  #caseStudy .row-2[data-v-1b29d588] {
+    margin-top: 4%;
   }
   #about .first-section-bg {
     width: 50%;
@@ -2653,8 +2698,16 @@ export default {
   #media .media-bg .media-img {
     left: 32%;
   }
+  #blog .second-section {
+    height: 27%;
+  }
+  #blog .third-section {
+    height: 27%;
+  }
+
   #blog .fourth-section {
-    top: 35rem;
+    top: 34rem;
+    height: 48%;
   }
   #category .category-bg {
     height: 110%;
@@ -2676,10 +2729,19 @@ export default {
     top: 10.5rem;
   }
   #caseStudy .row-1 {
-    margin-top: 13%;
+    margin-top: 7%;
   }
   #startProject .spaceman {
-    bottom: 0px;
+    bottom: -90px;
+  }
+  #contact h1 {
+    left: 104px;
+  }
+  #category .project-btn button {
+    top: 515px;
+  }
+  #media .project-btn button {
+    left: 45%;
   }
 }
 
@@ -2706,13 +2768,14 @@ export default {
     width: 140px;
   }
   #caseStudy .row-1 {
-    margin-top: 8%;
+    margin-top: 5%;
   }
+
   #caseStudy .row-2 {
     margin-top: 0%;
   }
   #customer .customers-icon-group-one {
-    right: 63.9rem;
+    right: 63.9rem !important;
   }
   #customer .icon-box {
     width: 20rem;
@@ -2724,7 +2787,7 @@ export default {
   }
 
   #customer .customers-icon-group-two {
-    left: 79.4rem;
+    left: 79.4rem !important;
   }
   #caseStudy .more-company {
     height: 50px;
@@ -2918,6 +2981,18 @@ export default {
   }
   #about .about-text .about-bar {
     margin-top: 0rem;
+  }
+  #customer .customers-icon-group-one {
+    right: 79.9rem !important;
+  }
+  #customer .customers-icon-group-two {
+    left: 83.4rem !important;
+  }
+  #customer .customers-icon-group-three {
+    right: 33rem !important;
+  }
+  #customer .customers-text {
+    top: 22rem;
   }
 }
 </style>
