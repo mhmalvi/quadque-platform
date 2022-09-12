@@ -147,5 +147,3 @@ const app = new Vue({
         window.removeEventListener("DOMMouseScroll", this.handleMouseWheelDOM); // Mozilla Firefox
     }, */
 });
-
-app.use(VueFullPage);

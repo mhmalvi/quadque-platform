@@ -26,6 +26,17 @@ class CaseStudyController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function getAll()
+    {
+        $case_studies = CaseStudy::all();
+
+        return response()->json($case_studies);
+    }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
         $case_studies = CaseStudy::all();

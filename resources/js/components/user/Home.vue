@@ -125,7 +125,7 @@
 
     <section id="home" class="section d-none d-xl-block">
       <video class="background-video" autoplay loop muted>
-        <source :src="'assets/bg-video/header-video-3.mp4'" type="video/mp4" />
+        <source src="/assets/bg-video/header-video-3.mp4" type="video/mp4" />
       </video>
       <div class="video-text">
         <v-typical
@@ -135,7 +135,7 @@
           :wrapper="'h1'"
         ></v-typical>
         <!--     <h1>We Build Awesome Creation</h1> -->
-        <a href="javascript:void(0)"
+        <a href="#contact"
           >contact us<img :src="'assets/img/contact-icon.png'"
         /></a>
       </div>
@@ -700,7 +700,80 @@
     </section>
 
     <!-- Mobile version of QuadQue Tech Laravel Vue version-->
-    <section id="mobile-home"></section>
+    <section id="mobile-header">
+      <div class="mobile-header d-flex justify-content-between">
+        <div class="mobile-icon">
+          <img :src="'/assets/img/mobile-icon.svg'" />
+        </div>
+        <div class="mobile-hambergur">
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="mobile-home">
+      <div class="hero-text">
+        <h1>We Build Awesome Creation</h1>
+      </div>
+      <div class="hero-contact-us">
+        Contact Us<a href="#mobile-contact"
+          ><img :src="'assets/img/contact-icon.png'"
+        /></a>
+      </div>
+      <div class="mobile-hero-video">
+        <video autoplay loop muted>
+          <source src="/assets/bg-video/header-video-3.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="lower-section d-flex justify-content-between">
+        <div class="home-start-project"><a href="#">Start Project</a></div>
+        <div class="home-language"><a href="#">EN</a><a href="#">BN</a></div>
+      </div>
+    </section>
+    <section id="mobile-customers">
+      <div class="customer-text">
+        <h2>More then valuable <span>100</span>coustomers</h2>
+        <p>
+          We create premium web design, though and user-friendly that solve
+          business problems We create premium web design.
+        </p>
+      </div>
+      <div class="customer-gallery">
+        <div class="d-flex justify-content-between">
+          <div><img src="/assets/img/customers/atr.svg" /></div>
+          <div><img src="/assets/img/customers/otobi.svg" /></div>
+        </div>
+        <div class="d-flex justify-content-between">
+          <div><img src="/assets/img/customers/ibm.svg" /></div>
+          <div><img src="/assets/img/customers/nta.svg" /></div>
+        </div>
+        <div class="d-flex justify-content-between">
+          <div><img src="/assets/img/customers/officemate.svg" /></div>
+          <div><img src="/assets/img/customers/toptrip.svg" /></div>
+        </div>
+        <div class="d-flex justify-content-between">
+          <div><img src="/assets/img/customers/marriage.svg" /></div>
+          <div><img src="/assets/img/customers/otobi.svg" /></div>
+        </div>
+      </div>
+    </section>
+    <section id="mobile-caseStudy">
+      <div class="caseStudy-text">
+        <h1>Case study</h1>
+        <p>We create premium web design, though and user</p>
+        <a href="#">See More</a>
+      </div>
+      <carousel :items="1" :loop="true" :autoplay="true">
+        <img
+          v-for="case_studie in case_studies"
+          :key="case_studie.id"
+          :src="`/assets/img/case_study/${case_studie.com_image}`"
+        />
+      </carousel>
+    </section>
   </div>
 </template>
 
@@ -709,15 +782,18 @@ import axios from "axios";
 import VTypical from "vue-typical";
 import MarqueeText from "vue-marquee-text-component";
 import DynamicMarquee from "vue-dynamic-marquee";
+import carousel from "vue-owl-carousel";
 export default {
   props: ["caseStudyFirstRows", "caseStudySecondRows", "blogsInfo"],
   components: {
     VTypical,
     MarqueeText,
     DynamicMarquee,
+    carousel,
   },
   data() {
     return {
+      case_studies: [],
       caseQueryNum: 2,
       caseStudyNums:
         Object.keys(this.caseStudyFirstRows).length +
@@ -735,9 +811,14 @@ export default {
   },
 
   methods: {
-    // Called when your components are ready. That is up to you to decide when.
-    componentsReady() {
-      this.$refs.fullpage.init();
+    //get all case study for mobile version
+    getAllCaseStudy() {
+      axios
+        .get("/get/case-study/all/")
+        .then((response) => {
+          this.case_studies = response.data;
+        })
+        .catch((error) => {});
     },
     //show menu text after hover
 
@@ -850,7 +931,9 @@ export default {
     },
   },
 
-  mounted() {},
+  mounted() {
+    this.getAllCaseStudy();
+  },
 };
 </script>
 <style scoped>
@@ -2655,7 +2738,7 @@ export default {
   #customer .customers-icon-group-two {
     right: 56rem !important;
   }
-  #testimonial .first-section .quotation-img[data-v-1b29d588] {
+  #testimonial .first-section .quotation-img {
     margin-top: 1rem;
     margin-left: 1rem;
   }
@@ -2899,7 +2982,7 @@ export default {
     width: 60%;
     height: 80%;
   }
-  #testimonial .second-section .client-review[data-v-1b29d588] {
+  #testimonial .second-section .client-review {
     width: 427px;
     height: 144px;
     font-weight: 400;
@@ -2909,20 +2992,20 @@ export default {
     margin-top: 65px;
     margin-bottom: 45px;
   }
-  #testimonial .second-section .client-name[data-v-1b29d588] {
+  #testimonial .second-section .client-name {
     font-size: 14px;
   }
-  #testimonial .second-section .client-designation[data-v-1b29d588] {
+  #testimonial .second-section .client-designation {
     font-size: 14px;
   }
-  #testimonial .second-section .prev[data-v-1b29d588] {
+  #testimonial .second-section .prev {
     font-weight: 400;
     font-size: 20px;
   }
-  #testimonial .second-section .pagination-arrow[data-v-1b29d588] {
+  #testimonial .second-section .pagination-arrow {
     width: 60px;
   }
-  #testimonial .second-section .next[data-v-1b29d588] {
+  #testimonial .second-section .next {
     font-weight: 400;
     font-size: 20px;
   }
@@ -2993,6 +3076,199 @@ export default {
   }
   #customer .customers-text {
     top: 22rem;
+  }
+}
+
+/****************  Mobile version style ************ *********/
+#mobile-header {
+  width: 100%;
+  position: fixed;
+  background: #000;
+}
+#mobile-home {
+  width: 100%;
+  height: auto;
+  margin-top: 25%;
+}
+#mobile-header .mobile-header {
+  padding-top: 4%;
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-bottom: 4%;
+}
+#mobile-header .mobile-header .mobile-hambergur {
+  width: 50px;
+  height: auto;
+}
+#mobile-header .mobile-header .mobile-hambergur ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 100%;
+  height: 100%;
+}
+#mobile-header .mobile-header .mobile-hambergur ul li:nth-child(1) {
+  width: 13px;
+  height: 3px;
+  background: #fff;
+  border-radius: 25px;
+  margin-bottom: 5px;
+}
+#mobile-header .mobile-header .mobile-hambergur ul li:nth-child(2) {
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  border-radius: 25px;
+  margin-bottom: 5px;
+}
+#mobile-header .mobile-header .mobile-hambergur ul li:nth-child(3) {
+  width: 13px;
+  height: 3px;
+  background: #fff;
+  border-radius: 25px;
+  margin-left: 16px;
+}
+#mobile-home .hero-text,
+.hero-contact-us {
+  padding: 0% 7%;
+}
+
+#mobile-home .hero-text {
+  width: 31%;
+  margin-top: 10%;
+}
+#mobile-home .hero-text h1 {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 30px;
+  letter-spacing: 0.05em;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+#mobile-home .hero-contact-us {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 4%;
+}
+#mobile-home .hero-contact-us img {
+  display: inline-block;
+  width: 4%;
+  margin-left: 3%;
+}
+#mobile-home .mobile-hero-video {
+  width: 100vw;
+  height: 46vh;
+}
+#mobile-home .mobile-hero-video video {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+#mobile-home .lower-section {
+  padding: 7% 7% 7% 7%;
+}
+#mobile-home .home-start-project a {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 22px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+}
+#mobile-home .home-language a:nth-child(1) {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  margin-right: 5px;
+}
+#mobile-home .home-language a:nth-child(2) {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #888888;
+}
+
+/*********** Mobile customers *************** */
+#mobile-customers .customer-text {
+  padding: 7% 7% 0% 7%;
+}
+#mobile-customers .customer-text h2 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 35px;
+  width: 214px;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+#mobile-customers .customer-text h2 span {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 35px;
+  text-transform: capitalize;
+  color: #8f00ff;
+  margin-right: 5%;
+}
+#mobile-customers .customer-text p {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 25px;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+#mobile-customers .customer-gallery {
+  padding: 0% 7% 7% 7%;
+}
+#mobile-caseStudy {
+  padding: 5%;
+}
+#mobile-caseStudy .caseStudy-text {
+}
+#mobile-caseStudy .caseStudy-text h1 {
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 40px;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+#mobile-caseStudy .caseStudy-text p {
+  font-weight: 300;
+  width: 200px;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+
+  color: #ffffff;
+}
+#mobile-caseStudy .caseStudy-text a {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/********** Mobile CAse  */
+
+@media screen and (min-width: 429px) {
+  #mobile-home,
+  #mobile-customers {
+    display: none;
   }
 }
 </style>
