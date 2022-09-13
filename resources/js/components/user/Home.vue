@@ -124,7 +124,7 @@
     <!-- end menu -->
 
     <section id="home" class="section d-none d-xl-block">
-      <video class="background-video" autoplay loop muted>
+      <video class="background-video d-none d-xl-block" autoplay loop muted>
         <source src="/assets/bg-video/header-video-3.mp4" type="video/mp4" />
       </video>
       <div class="video-text">
@@ -700,6 +700,9 @@
     </section>
 
     <!-- Mobile version of QuadQue Tech Laravel Vue version-->
+
+    <!--------------- Mobile header section ----------------------->
+
     <section id="mobile-header">
       <div class="mobile-header d-flex justify-content-between">
         <div class="mobile-icon">
@@ -714,6 +717,9 @@
         </div>
       </div>
     </section>
+
+    <!--------------- Mobile home section ----------------------->
+
     <section id="mobile-home">
       <div class="hero-text">
         <h1>We Build Awesome Creation</h1>
@@ -733,6 +739,9 @@
         <div class="home-language"><a href="#">EN</a><a href="#">BN</a></div>
       </div>
     </section>
+
+    <!--------------- Mobile customer section ----------------------->
+
     <section id="mobile-customers">
       <div class="customer-text">
         <h2>More then valuable <span>100</span>coustomers</h2>
@@ -760,19 +769,263 @@
         </div>
       </div>
     </section>
+
+    <!--------------- Mobile case study section----------------------->
+
     <section id="mobile-caseStudy">
       <div class="caseStudy-text">
         <h1>Case study</h1>
         <p>We create premium web design, though and user</p>
         <a href="#">See More</a>
       </div>
-      <carousel :items="1" :loop="true" :autoplay="true">
-        <img
-          v-for="case_studie in case_studies"
-          :key="case_studie.id"
-          :src="`/assets/img/case_study/${case_studie.com_image}`"
-        />
+      <div class="mob-casestudy-carousel" v-if="case_studies.length > 0">
+        <carousel :items="1" :loop="true" :autoplay="true" :dots="false">
+          <img
+            style="width: 250px"
+            v-for="case_studie in case_studies"
+            :key="case_studie.id"
+            :src="`/assets/img/case_study/${case_studie.com_image}`"
+          />
+        </carousel>
+      </div>
+    </section>
+
+    <!--------------- Mobile client section ----------------------->
+
+    <section id="mobile-client">
+      <h1>Our clients speak</h1>
+      <carousel :items="1" :loop="true" :autoplay="true" :dots="false">
+        <div class="mob-client-carousel">
+          <div class="client-details d-flex justify-content-between">
+            <p>Sourab Sen</p>
+            <p>Texlab CEO</p>
+          </div>
+          <div class="mob-client-img">
+            <img src="/assets/img/client_img.svg" />
+          </div>
+          <div class="client-comment">
+            <p>
+              We create premium web design, though and user Business Analytics
+              is not based on rote memorization of equations or facts, but
+              focuses on honing your understanding of key concepts, your
+              managerial judgment, and your ability to apply course concepts to
+              real business problems. This course begins with basic descriptive
+              statistics and progresses to regression analysis.
+            </p>
+          </div>
+        </div>
+        <div class="mob-client-carousel">
+          <div class="client-details d-flex justify-content-between">
+            <p>Sourab Sen</p>
+            <p>Texlab CEO</p>
+          </div>
+          <div class="mob-client-img">
+            <img src="/assets/img/client_img.svg" />
+          </div>
+          <div class="client-comment">
+            <p>
+              We create premium web design, though and user Business Analytics
+              is not based on rote memorization of equations or facts, but
+              focuses on honing your understanding of key concepts, your
+              managerial judgment, and your ability to apply course concepts to
+              real business problems. This course begins with basic descriptive
+              statistics and progresses to regression analysis.
+            </p>
+          </div>
+        </div>
+        <div class="mob-client-carousel">
+          <div class="client-details d-flex justify-content-between">
+            <p>Sourab Sen</p>
+            <p>Texlab CEO</p>
+          </div>
+          <div class="mob-client-img">
+            <img src="/assets/img/client_img.svg" />
+          </div>
+          <div class="client-comment">
+            <p>
+              We create premium web design, though and user Business Analytics
+              is not based on rote memorization of equations or facts, but
+              focuses on honing your understanding of key concepts, your
+              managerial judgment, and your ability to apply course concepts to
+              real business problems. This course begins with basic descriptive
+              statistics and progresses to regression analysis.
+            </p>
+          </div>
+        </div>
       </carousel>
+    </section>
+
+    <!--------------- Mobile media buying section ----------------------->
+
+    <section id="mobile-media">
+      <h1>Our Media Buying</h1>
+      <p class="mob-media-text">
+        Lorem ipsum dolor sit amet consectetur adipiscing tempor. Risus
+        ultricies tristique...
+      </p>
+      <div class="mob-media-img">
+        <img src="/assets/img/media_buying.svg" />
+      </div>
+      <div class="mob-client-start-project">
+        <a href="#">Start Project</a>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipiscing tempor. Risus
+          ultricies tristique nulla enim tortor.
+        </p>
+      </div>
+    </section>
+
+    <!--------------- Mobile about us section ----------------------->
+
+    <section id="mobile-aboutus">
+      <h1>About us</h1>
+      <div class="aboutus-img">
+        <img src="/assets/img/mob_about_us.svg" />
+      </div>
+      <div class="aboutus-progressbar"></div>
+      <div class="aboutus-scrollbox">
+        <div class="scroll-item">
+          <h4>This is the second feature</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipiscing tempor. Risus
+            ultricies tristique...
+          </p>
+        </div>
+        <div class="scroll-item">
+          <h4>This is the second feature</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipiscing tempor. Risus
+            ultricies tristique...
+          </p>
+        </div>
+        <div class="scroll-item">
+          <h4>This is the second feature</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipiscing tempor. Risus
+            ultricies tristique...
+          </p>
+        </div>
+        <div class="scroll-item">
+          <h4>This is the second feature</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipiscing tempor. Risus
+            ultricies tristique...
+          </p>
+        </div>
+        <div class="scroll-item">
+          <h4>This is the second feature</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipiscing tempor. Risus
+            ultricies tristique...
+          </p>
+        </div>
+        <div class="scroll-item">
+          <h4>This is the second feature</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipiscing tempor. Risus
+            ultricies tristique...
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--------------- Mobile contact section ----------------------->
+    <section id="mobile-contact">
+      <h1>Have a Good Web Designe Today</h1>
+      <div class="lets-talk">
+        <a href="#" class="btn btn-secondary">let's talk</a>
+      </div>
+      <div class="row">
+        <div class="col-6 mob-contact-product">
+          <h5>Product</h5>
+          <ul>
+            <li>Landing Page</li>
+            <li>Pricing</li>
+            <li>FAQ</li>
+            <li>Affiliate</li>
+          </ul>
+          <p>Level 1, 7 Greenfield Parade Bankstown, NSW 2200</p>
+          <p>
+            <img src="/assets/img/vector.svg" />
+            Quadque<br />
+            Technologies Pty Ltd<br />
+            LEVEL 1/7 Greenfield Parade,<br />
+            Bankstown NSW 2200
+          </p>
+        </div>
+        <div class="col-6 mob-contact-company">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Career</a></li>
+          </ul>
+          <p>+61405899496 info@quadque.tech</p>
+          <p>
+            <img src="/assets/img/vector.svg" />
+            Quadque<br />
+            Technologies Limited<br />
+            Level -7, 8/C, F.R Tower,<br />
+            Panthapath, Dhaka 1207
+          </p>
+        </div>
+      </div>
+      <div class="mob-social-icon">
+        <ul>
+          <li>
+            <a href="https://www.facebook.com/quadquetech/" target="_blank"
+              ><img src="/assets/img/facebook-current.svg"
+            /></a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/quadquetech/?hl=en"
+              target="_blank"
+              ><img src="/assets/img/instagram-current.svg"
+            /></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/quadquet?lang=en" target="_blank"
+              ><img src="/assets/img/twitter-current.svg"
+            /></a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/channel/UCXbnZTYKk6q82Hbux3ffILA/videos?view=0&sort=p"
+              target="_blank"
+              ><img src="/assets/img/youtube-current.svg"
+            /></a>
+          </li>
+        </ul>
+      </div>
+      <div class="all-right">Quadque©2022, All rights reserved</div>
+    </section>
+
+    <!--------------- Mobile start project section ----------------------->
+    <section id="mobile-start-project">
+      <h1 class="">
+        <span>Start</span>
+        <span>Project</span>
+      </h1>
+      <div class="row mob-start-project-menu">
+        <div class="col-6 mob-start-project-menu1">
+          <ul>
+            <li><a href="#">UI &UX</a></li>
+            <li><a href="#">Digital Marketing</a></li>
+            <li><a href="#">Web Development</a></li>
+          </ul>
+        </div>
+        <div class="col-6 mob-start-project-menu2">
+          <ul>
+            <li><a href="#">AI & IoT Solutions</a></li>
+            <li><a href="#">App Development</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="start-project-social-btn">
+        <a href="#" class="btn btn-secondary"></a>
+      </div>
     </section>
   </div>
 </template>
@@ -2829,6 +3082,23 @@ export default {
 }
 
 @media screen and (max-width: 1366px) {
+  #menu .service a {
+    top: 25%;
+  }
+  #menu .about a {
+    top: 25%;
+    left: 506px;
+  }
+  #menu .portfolio a {
+    top: 25%;
+  }
+  #menu .blogs a {
+    top: 45%;
+  }
+  #menu .contact a {
+    top: 45%;
+  }
+
   #home .video-text {
     top: 36rem;
   }
@@ -3083,7 +3353,8 @@ export default {
 #mobile-header {
   width: 100%;
   position: fixed;
-  background: #000;
+  background: transparent;
+  z-index: 10;
 }
 #mobile-home {
   width: 100%;
@@ -3231,6 +3502,8 @@ export default {
 #mobile-customers .customer-gallery {
   padding: 0% 7% 7% 7%;
 }
+
+/********* mobile case study styles ******/
 #mobile-caseStudy {
   padding: 5%;
 }
@@ -3262,12 +3535,295 @@ export default {
   color: #ffffff;
   text-decoration: none;
 }
+#mobile-caseStudy .mob-casestudy-carousel {
+  margin-top: 10%;
+  transform: translateX(17%);
+}
 
-/********** Mobile CAse  */
+/************ mobile clients styles ***********/
+#mobile-client {
+  padding: 7%;
+}
+
+#mobile-client h1 {
+  width: 140px;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 25px;
+  color: #ffffff;
+}
+#mobile-client .client-details {
+  margin: 7% 0 0% 0;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+#mobile-client .mob-client-img {
+  height: 172px;
+}
+#mobile-client .mob-client-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#mobile-client .client-comment p {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 5%;
+}
+
+/********* mobile media *********/
+#mobile-media {
+  padding: 7%;
+  margin-top: 10%;
+}
+#mobile-media h1 {
+  width: 136px;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 25px;
+  color: #ffffff;
+  margin-bottom: 8%;
+}
+#mobile-media .mob-media-text {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 8%;
+}
+
+#mobile-media .mob-media-img {
+  height: 350px;
+  margin-bottom: 10%;
+}
+#mobile-media .mob-media-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#mobile-media .mob-client-start-project {
+}
+#mobile-media .mob-client-start-project a {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  color: #8f00ff;
+  display: block;
+  text-decoration: none;
+  margin-bottom: 5%;
+}
+#mobile-media .mob-client-start-project p {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.04em;
+  color: #d0d4ea;
+  width: 82%;
+}
+
+/********* about us **************/
+#mobile-aboutus {
+  padding: 7%;
+  margin-top: 5%;
+}
+#mobile-aboutus h1 {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 39px;
+  color: #ffffff;
+}
+#mobile-aboutus .aboutus-img {
+  height: 150px;
+  width: 100%;
+  margin-bottom: 5%;
+}
+#mobile-aboutus .aboutus-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#mobile-aboutus .aboutus-progressbar {
+}
+#mobile-aboutus .aboutus-scrollbox {
+  width: 100%;
+  height: 500px;
+  overflow-y: scroll;
+  text-align: left;
+}
+#mobile-aboutus .aboutus-scrollbox::-webkit-scrollbar {
+  display: none;
+}
+#mobile-aboutus .aboutus-scrollbox .scroll-item {
+  padding: 5% 0 5% 0;
+  border-top: 1px solid #fafafa;
+}
+#mobile-aboutus .aboutus-scrollbox .scroll-item h4 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 180%;
+  color: #fff;
+}
+#mobile-aboutus .aboutus-scrollbox .scroll-item:nth-child(1) h4 {
+  color: #8f00ff;
+}
+#mobile-aboutus .aboutus-scrollbox .scroll-item p {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.04em;
+  color: #d0d4ea;
+}
+
+/********** contact page ******/
+
+#mobile-contact {
+  padding: 7%;
+}
+#mobile-contact h1 {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 35px;
+  color: #ffffff;
+  width: 233px;
+  margin-top: 10%;
+}
+#mobile-contact .lets-talk {
+  margin: 10% 0 10% 0;
+}
+
+#mobile-contact .lets-talk a {
+  border: 1px solid #ffffff;
+  border-radius: 30px;
+  width: 160px;
+  background: transparent;
+}
+#mobile-contact .mob-contact-product {
+}
+#mobile-contact .mob-contact-product h5 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 138%;
+  color: #eeeeee;
+}
+#mobile-contact .mob-contact-product ul {
+  margin: 10% 0;
+  padding: 0;
+  list-style-type: none;
+}
+#mobile-contact .mob-contact-product ul li {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 172%;
+  margin-top: 5%;
+  color: #acafb8;
+}
+#mobile-contact .mob-contact-product p:nth-of-type(1) {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.04em;
+  color: #d0d4ea;
+}
+#mobile-contact .mob-contact-product p:nth-of-type(2) {
+  font-weight: 200;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0.04em;
+  color: #d0d4ea;
+}
+#mobile-contact .mob-contact-product p:nth-of-type(2) img {
+}
+#mobile-contact .company {
+}
+#mobile-contact .mob-contact-company h5 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 138%;
+  color: #eeeeee;
+}
+#mobile-contact .mob-contact-company ul {
+  padding: 0;
+  list-style-type: none;
+}
+#mobile-contact .mob-contact-company ul li a {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 172%;
+  margin-top: 5%;
+  color: #acafb8;
+  display: inline-block;
+  text-decoration: none;
+}
+#mobile-contact .mob-contact-company p:nth-of-type(1) {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.04em;
+  color: #d0d4ea;
+}
+#mobile-contact .mob-contact-company p:nth-of-type(2) {
+  font-weight: 200;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0.04em;
+  color: #d0d4ea;
+  margin-top: 20%;
+}
+#mobile-contact .mob-contact-company p:nth-of-type(2) img {
+}
+#mobile-contact .mob-social-icon {
+  margin-top: 5%;
+}
+#mobile-contact .mob-social-icon ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  margin-bottom: 5%;
+}
+#mobile-contact .mob-social-icon ul li {
+  margin: 0 0;
+}
+#mobile-contact .mob-social-icon ul li a img {
+  width: 40px;
+  height: 40px;
+}
+#mobile-contact .all-right {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 172%;
+  letter-spacing: -0.05em;
+  font-feature-settings: "salt" on, "liga" off;
+  color: #acafb8;
+  text-align: center;
+}
+
+/********** Mobile Case  */
 
 @media screen and (min-width: 429px) {
   #mobile-home,
-  #mobile-customers {
+  #mobile-customers,
+  #mobile-caseStudy,
+  #mobile-header,
+  #mobile-client,
+  #mobile-media,
+  #mobile-aboutus,
+  #mobile-contact,
+  #mobile-start-project {
     display: none;
   }
 }
