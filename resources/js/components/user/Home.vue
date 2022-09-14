@@ -124,9 +124,9 @@
     <!-- end menu -->
 
     <section id="home" class="section d-none d-xl-block">
-      <video class="background-video d-none d-xl-block" autoplay loop muted>
+      <!-- <video class="background-video d-none d-xl-block" autoplay loop muted>
         <source src="/assets/bg-video/header-video-3.mp4" type="video/mp4" />
-      </video>
+      </video> -->
       <div class="video-text">
         <v-typical
           class="blink"
@@ -1011,20 +1011,172 @@
       <div class="row mob-start-project-menu">
         <div class="col-6 mob-start-project-menu1">
           <ul>
-            <li><a href="#">UI &UX</a></li>
-            <li><a href="#">Digital Marketing</a></li>
-            <li><a href="#">Web Development</a></li>
+            <li>
+              <a href="javascript:void(0)" @click="mobProjectStartMenu($event)"
+                >UI &UX</a
+              >
+            </li>
+            <li>
+              <a href="javascript:void(0)" @click="mobProjectStartMenu($event)"
+                >Digital Marketing</a
+              >
+            </li>
+            <li>
+              <a href="javascript:void(0)" @click="mobProjectStartMenu($event)"
+                >Web Development</a
+              >
+            </li>
           </ul>
         </div>
         <div class="col-6 mob-start-project-menu2">
           <ul>
-            <li><a href="#">AI & IoT Solutions</a></li>
-            <li><a href="#">App Development</a></li>
+            <li>
+              <a href="javascript:void(0)" @click="mobProjectStartMenu($event)"
+                >AI & IoT Solutions</a
+              >
+            </li>
+            <li>
+              <a href="javascript:void(0)" @click="mobProjectStartMenu($event)"
+                >App Development</a
+              >
+            </li>
           </ul>
         </div>
       </div>
-      <div class="start-project-social-btn">
-        <a href="#" class="btn btn-secondary"></a>
+      <div class="start-project-social-btn-group">
+        <div class="start-project-social-btn-group-first-row">
+          <input
+            type="checkbox"
+            id="digitalMarketing"
+            name="digitalMarketing"
+          />
+          <label for="digitalMarketing">Digital Marketing</label>
+          <input type="checkbox" id="cusGoogleAds" name="cusGoogleAds" />
+          <label for="cusGoogleAds">Google ADs</label>
+        </div>
+
+        <div class="start-project-social-btn-group-second-row">
+          <input
+            type="checkbox"
+            id="socialmediamarketing"
+            name="socialmediamarketing"
+          />
+          <label for="socialmediamarketing">Social Media Marketing</label><br />
+          <input
+            type="checkbox"
+            id="specificappsmarketing"
+            name="specificappsmarketing"
+            value="Car"
+          />
+          <label for="specificappsmarketing"> Specific Apps Marketing</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-8">
+          <form class="start-project-form">
+            <div class="form-group">
+              <input class="form-control" placeholder="Name" />
+            </div>
+            <div class="form-group">
+              <input class="form-control" placeholder="Phone" />
+            </div>
+            <div class="form-group">
+              <input class="form-control" placeholder="E-mail" />
+            </div>
+            <div class="form-group">
+              <input class="form-control" placeholder="How can we help you" />
+            </div>
+            <button class="btn btn-secondary">Submit</button>
+          </form>
+        </div>
+      </div>
+      <div class="start-project-info">
+        <div>+61405899496</div>
+        <div>info@quadque.tech</div>
+      </div>
+    </section>
+
+    <!--------------- Mobile blogs section ----------------------->
+    <section id="mobile-blogs">
+      <div class="mob-first-blog">
+        <img :src="`/assets/img/blogs/${blogsInfo.firstBlogThumbnail}`" />
+        <span class="mob-blog-title" @click="showBlog(blogsInfo.firstBlogId)">{{
+          blogsInfo.firstBlogTitle
+        }}</span>
+        <span class="mob-blog-date">{{ blogsInfo.firstBlogDate }}</span>
+      </div>
+      <div class="mob-second-blog">
+        <img :src="`/assets/img/blogs/${blogsInfo.secondBlogThumbnail}`" />
+        <span
+          class="mob-blog-title"
+          @click="showBlog(blogsInfo.secondBlogId)"
+          >{{ blogsInfo.secondBlogTitle }}</span
+        >
+        <span class="mob-blog-date">{{ blogsInfo.secondBlogDate }}</span>
+      </div>
+      <div class="row">
+        <div class="col-6 mob-third-blog">
+          <img :src="`/assets/img/blogs/${blogsInfo.thirdBlogThumbnail}`" />
+          <span
+            class="mob-blog-title"
+            @click="showBlog(blogsInfo.thirdBlogId)"
+            >{{ blogsInfo.thirdBlogTitle }}</span
+          >
+          <span class="mob-blog-date">{{ blogsInfo.thirdBlogDate }}</span>
+        </div>
+        <div class="col-6 mob-fourth-blog">
+          <img :src="`/assets/img/blogs/${blogsInfo.fourthBlogThumbnail}`" />
+          <span class="mob-blog-title">See More</span>
+        </div>
+      </div>
+    </section>
+
+    <!--------------- Mobile careers section ----------------------->
+    <section id="mobile-career">
+      <h1>
+        Current Job<br />
+        Openings
+      </h1>
+      <div class="career-section">
+        <div class="career-item">
+          <div class="career-img-box">
+            <img src="/assets/img/career-img-1.svg" />
+          </div>
+          <div class="career-position">Creative Graphic Designer</div>
+          <div class="deadline"><span>Deadline </span>19.022021</div>
+        </div>
+        <div class="career-item">
+          <div class="career-img-box">
+            <img src="/assets/img/career-img-2.svg" />
+          </div>
+          <div class="career-position">Creative Graphic Designer</div>
+          <div class="deadline"><span>Deadline </span>19.022021</div>
+        </div>
+      </div>
+    </section>
+
+    <!--------------- Mobile careers section ----------------------->
+    <section id="mobile-gallery">
+      <div class="gallery-bg">
+        <h1>Gallery</h1>
+      </div>
+      <div class="row gallery-section">
+        <div class="col-6 gallery-first-col">
+          <div class="odd-item">
+            <img src="/assets/img/gallery-1.svg" />
+          </div>
+          <div class="even-item">
+            <img src="/assets/img/gallery-3.svg" />
+          </div>
+        </div>
+        <div class="col-6 gallery-second-col">
+          <div class="odd-item">
+            <img src="/assets/img/gallery-2.svg" />
+          </div>
+          <div class="even-item">
+            <img src="/assets/img/gallery-4.svg" />
+          </div>
+        </div>
       </div>
     </section>
   </div>
@@ -1064,6 +1216,10 @@ export default {
   },
 
   methods: {
+    mobProjectStartMenu(event) {
+      let button = event.target;
+      $(button).css("color", "#8F00FF");
+    },
     //get all case study for mobile version
     getAllCaseStudy() {
       axios
@@ -3810,6 +3966,382 @@ export default {
   font-feature-settings: "salt" on, "liga" off;
   color: #acafb8;
   text-align: center;
+}
+
+#mobile-start-project {
+  padding: 7%;
+  margin-top: 15%;
+}
+#mobile-start-project h1 {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+#mobile-start-project h1 span:nth-of-type(1) {
+  display: block;
+}
+#mobile-start-project h1 span:nth-of-type(2) {
+  display: block;
+  margin-left: 5%;
+  margin-top: 2%;
+}
+#mobile-start-project .mob-start-project-menu {
+  margin: 8% 0;
+}
+#mobile-start-project .mob-start-project-menu .mob-start-project-menu1 {
+}
+#mobile-start-project .mob-start-project-menu .mob-start-project-menu1 ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+#mobile-start-project .mob-start-project-menu .mob-start-project-menu1 ul li {
+}
+#mobile-start-project .mob-start-project-menu .mob-start-project-menu1 ul li a {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 15px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+}
+#mobile-start-project .mob-start-project-menu .mob-start-project-menu2 {
+}
+#mobile-start-project .mob-start-project-menu .mob-start-project-menu2 ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+#mobile-start-project .mob-start-project-menu .mob-start-project-menu2 ul li {
+}
+#mobile-start-project .mob-start-project-menu .mob-start-project-menu2 ul li a {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 15px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+}
+#mobile-start-project .start-project-social-btn-group {
+}
+#mobile-start-project .start-project-social-btn-group input[type="checkbox"] {
+  display: none;
+}
+#mobile-start-project
+  .start-project-social-btn-group
+  input[type="checkbox"]
+  + label {
+  cursor: pointer;
+}
+#mobile-start-project
+  .start-project-social-btn-group
+  input[type="checkbox"]:checked
+  + label {
+  background: #fff;
+  color: #000;
+}
+
+#mobile-start-project
+  .start-project-social-btn-group
+  .start-project-social-btn-group-first-row {
+  margin-bottom: 1%;
+}
+#mobile-start-project
+  .start-project-social-btn-group
+  .start-project-social-btn-group-first-row
+  label:nth-of-type(1) {
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 60px;
+  padding: 5px 20px;
+  line-height: 25px;
+  color: #fff;
+}
+#mobile-start-project
+  .start-project-social-btn-group
+  .start-project-social-btn-group-first-row
+  label:nth-of-type(2) {
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 60px;
+  padding: 5px 20px;
+  line-height: 25px;
+  margin-left: 20px;
+  color: #fff;
+}
+#mobile-start-project
+  .start-project-social-btn-group
+  .start-project-social-btn-group-second-row
+  label:nth-of-type(1) {
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 60px;
+  padding: 5px 20px;
+  line-height: 25px;
+  display: inline-block;
+  margin-bottom: 3%;
+  color: #fff;
+}
+#mobile-start-project
+  .start-project-social-btn-group
+  .start-project-social-btn-group-second-row
+  label:nth-of-type(2) {
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 60px;
+  padding: 5px 20px;
+  line-height: 25px;
+  display: inline-block;
+  margin-bottom: 3%;
+  color: #fff;
+}
+#mobile-start-project .start-project-form input {
+  width: 100%;
+  background: #000;
+  border: none;
+  border-bottom: 0.25px solid #fff;
+  border-radius: 0;
+  font-style: normal;
+  font-weight: 275;
+  font-size: 15px;
+  line-height: 1.5rem;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  font-weight: 400;
+  outline: none;
+}
+#mobile-start-project .start-project-form button {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 18px;
+  text-transform: capitalize;
+  color: #ffffff;
+  background: transparent;
+  border: transparent;
+  margin-left: 0;
+  padding-left: 0;
+}
+#mobile-start-project .start-project-form {
+  margin-top: 10%;
+}
+#mobile-start-project .start-project-info {
+  text-align: right;
+  color: #fff;
+  font-size: 12px;
+}
+
+/*********** mobile blogs **********/
+#mobile-blogs {
+  padding: 7%;
+}
+#mobile-blogs .mob-first-blog {
+  height: 200px;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 5%;
+}
+#mobile-blogs .mob-first-blog img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+#mobile-blogs .mob-first-blog .mob-blog-title {
+  color: #fff;
+  position: absolute;
+  bottom: 40px;
+  right: 0;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 0 40px;
+  cursor: pointer;
+}
+#mobile-blogs .mob-first-blog .mob-blog-date {
+  position: absolute;
+  bottom: 16px;
+  left: 40px;
+  font-size: 10px;
+  color: #fff;
+  font-weight: 400;
+}
+#mobile-blogs .mob-second-blog {
+  height: 200px;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 5%;
+}
+#mobile-blogs .mob-second-blog .mob-blog-title {
+  color: #fff;
+  position: absolute;
+  bottom: 40px;
+  right: 0;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 0 40px;
+  cursor: pointer;
+}
+#mobile-blogs .mob-second-blog .mob-blog-date {
+  position: absolute;
+  bottom: 16px;
+  left: 40px;
+  font-size: 10px;
+  color: #fff;
+  font-weight: 400;
+}
+#mobile-blogs .mob-second-blog img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+#mobile-blogs .mob-third-blog {
+  height: 200px;
+  position: relative;
+}
+#mobile-blogs .mob-third-blog img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+#mobile-blogs .mob-third-blog .mob-blog-title {
+  color: #fff;
+  position: absolute;
+  bottom: 30px;
+  right: 0;
+  font-size: 10px;
+  font-weight: 500;
+  padding: 0 40px;
+  cursor: pointer;
+}
+#mobile-blogs .mob-third-blog .mob-blog-date {
+  position: absolute;
+  bottom: 16px;
+  left: 40px;
+  font-size: 10px;
+  color: #fff;
+  font-weight: 400;
+}
+#mobile-blogs .mob-fourth-blog {
+  height: 200px;
+  position: relative;
+}
+#mobile-blogs .mob-fourth-blog img {
+  height: 100%;
+  border-radius: 15px;
+  width: 100%;
+}
+#mobile-blogs .mob-fourth-blog .mob-blog-title {
+  color: #fff;
+  position: absolute;
+  bottom: 30px;
+  right: 0;
+  font-size: 10px;
+  font-weight: 500;
+  padding: 0 40px;
+  cursor: pointer;
+  transform: translateX(-26%);
+}
+
+/************** mobile career ************/
+#mobile-career {
+  padding: 7%;
+}
+#mobile-career h1 {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 30px;
+  color: #ffffff;
+}
+
+#mobile-career .career-section {
+  margin-top: 10%;
+}
+#mobile-career .career-section .career-item {
+  margin-bottom: 10%;
+}
+#mobile-career .career-section .career-item .career-img-box {
+  width: 100%;
+  height: 100%;
+}
+#mobile-career .career-section .career-item .career-img-box img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+#mobile-career .career-section .career-item .career-position {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ffffff;
+  margin-top: 5%;
+}
+#mobile-career .career-section .career-item .deadline {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 15px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+}
+
+/************** mobile gallery ********/
+
+#mobile-gallery {
+  padding: 7%;
+  margin-top: 10%;
+}
+#mobile-gallery .gallery-bg[data-v-1b29d588] {
+  background-image: url(/images/gallery-bg.svg?42c62f90ab7c44fc2056a14300135e09);
+  height: 200px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+#mobile-gallery .gallery-bg h1 {
+  position: absolute;
+  bottom: 4px;
+  left: 20px;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 25px;
+  color: #ffffff;
+}
+#mobile-gallery .gallery-section {
+  margin-top: 10%;
+}
+
+#mobile-gallery .gallery-section .gallery-first-col .odd-item {
+  margin-bottom: 5%;
+  width: 100%;
+}
+#mobile-gallery .gallery-section .gallery-first-col .odd-item img {
+  height: 100%;
+  width: 100%;
+}
+#mobile-gallery .gallery-section .gallery-first-col .even-item {
+}
+#mobile-gallery .gallery-section .gallery-first-col .even-item img {
+  height: 100%;
+  width: 100%;
+}
+
+#mobile-gallery .gallery-section .gallery-second-col .odd-item {
+  margin-bottom: 5%;
+}
+#mobile-gallery .gallery-section .gallery-second-col .odd-item img {
+  width: 100%;
+}
+#mobile-gallery .gallery-section .gallery-second-col .even-item {
+  margin-bottom: 5%;
+  width: 100%;
+}
+#mobile-gallery .gallery-section .gallery-second-col .even-item img {
+  height: 100%;
+  width: 100%;
 }
 
 /********** Mobile Case  */

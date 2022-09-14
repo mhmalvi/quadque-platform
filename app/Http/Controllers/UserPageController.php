@@ -17,32 +17,46 @@ class UserPageController extends Controller
 
         $firstBlog = Blog::orderBy('id', 'desc')->skip(0)->take(1)->first();
         $firstBlogId = $firstBlog->id;
+        $firstBlogThumbnail = $firstBlog->thumbnail;
         $firstBlogTitle = Str::of($firstBlog->title)->limit(90, '...');
         $firstBlogDate = strtotime($firstBlog->created_at);
         $firstBlogDate =  date('d  M  Y', $firstBlogDate);
 
         $secondBlog = Blog::orderBy('id', 'desc')->skip(1)->take(1)->first();
         $secondBlogId = $secondBlog->id;
+        $secondBlogThumbnail = $secondBlog->thumbnail;
         $secondBlogTitle = Str::of($secondBlog->title)->limit(90, '...');
+        $secondBlogDate = strtotime($secondBlog->created_at);
+        $secondBlogDate =  date('d  M  Y', $secondBlogDate);
 
         $thirdBlog = Blog::orderBy('id', 'desc')->skip(2)->take(1)->first();
         $thirdBlogId = $thirdBlog->id;
+        $thirdBlogThumbnail = $thirdBlog->thumbnail;
         $thirdBlogTitle = Str::of($thirdBlog->title)->limit(90, '...');
+        $thirdBlogDate = strtotime($thirdBlog->created_at);
+        $thirdBlogDate =  date('d  M  Y', $thirdBlogDate);
 
         $fourthBlog = Blog::orderBy('id', 'desc')->skip(3)->take(1)->first();
         $fourthBlogId = $fourthBlog->id;
+        $fourthBlogThumbnail = $fourthBlog->thumbnail;
         $fourthBlogTitle = Str::of($fourthBlog->title)->limit(90, '...');
 
         $blogs = [
             'firstBlogId' => $firstBlogId,
             'firstBlogTitle' => $firstBlogTitle,
+            'firstBlogThumbnail' => $firstBlogThumbnail,
             'firstBlogDate' => $firstBlogDate,
             'secondBlogId' => $secondBlogId,
             'secondBlogTitle' => $secondBlogTitle,
+            'secondBlogThumbnail' => $secondBlogThumbnail,
+            'secondBlogDate' => $secondBlogDate,
             'thirdBlogId' => $thirdBlogId,
             'thirdBlogTitle' => $thirdBlogTitle,
+            'thirdBlogThumbnail' => $thirdBlogThumbnail,
+            'thirdBlogDate' => $thirdBlogDate,
             'fourthBlogId' => $fourthBlogId,
-            'fourthBlogTitle' => $fourthBlogTitle
+            'fourthBlogTitle' => $fourthBlogTitle,
+            'fourthBlogThumbnail' => $fourthBlogThumbnail,
         ];
 
         $blogs = json_encode($blogs);
