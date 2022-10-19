@@ -1,0 +1,2022 @@
+/****************  Mobile version style ************ *********/
+
+.showMenuMobile {
+    left: 0 !important;
+    display: block !important;
+    width: 100% !important;
+}
+
+.hideOtherSection {
+    display: none;
+}
+#mobile-version {
+    position: relative;
+}
+#mobile-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: transparent;
+    z-index: 10;
+    padding: 3% 0px;
+}
+#mobile-home {
+    width: 100%;
+    height: auto;
+    padding-top: 20%;
+}
+#mobile-header .mobile-header {
+    padding-top: 4%;
+    padding-left: 7%;
+    padding-right: 7%;
+    padding-bottom: 4%;
+}
+#mobile-header .mobile-header .mobile-hambergur {
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+    z-index: 10;
+}
+#mobile-header .mobile-header .mobile-hambergur ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    width: 100%;
+    height: 100%;
+}
+#mobile-header .mobile-header .mobile-hambergur ul li:nth-child(1) {
+    width: 13px;
+    height: 3px;
+    background: #fff;
+    border-radius: 25px;
+    margin-bottom: 5px;
+}
+#mobile-header .mobile-header .mobile-hambergur ul li:nth-child(2) {
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    border-radius: 25px;
+    margin-bottom: 5px;
+}
+#mobile-header .mobile-header .mobile-hambergur ul li:nth-child(3) {
+    width: 13px;
+    height: 3px;
+    background: #fff;
+    border-radius: 25px;
+    margin-left: 16px;
+}
+#mobile-home .hero-text,
+.hero-contact-us {
+    padding: 0% 7%;
+}
+
+#mobile-home .hero-text {
+    width: 31%;
+    margin-top: 10%;
+}
+#mobile-home .hero-text h1 {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 30px;
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+    color: #ffffff;
+}
+#mobile-home .hero-contact-us {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding-bottom: 10%;
+}
+#mobile-home .hero-contact-us img {
+    display: inline-block;
+    width: 4%;
+    margin-left: 3%;
+}
+#mobile-home .mobile-hero-video {
+    width: 100vw;
+    height: 46vh;
+}
+#mobile-home .mobile-hero-video video {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#mobile-home .lower-section {
+    padding: 20% 7% 7% 7%;
+}
+#mobile-home .home-start-project a {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+}
+#mobile-home .home-language a:nth-child(1) {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+    margin-right: 5px;
+}
+#mobile-home .home-language a:nth-child(2) {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #888888;
+}
+
+/*********** Mobile customers *************** */
+#mobile-customers {
+    margin-top: 10%;
+}
+#mobile-customers .customer-text {
+    padding: 7% 7% 0% 7%;
+    margin-bottom: 10%;
+}
+#mobile-customers .customer-text h2 {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 35px;
+    width: 260px;
+    text-transform: capitalize;
+    color: #ffffff;
+    margin-bottom: 10%;
+}
+#mobile-customers .customer-text h2 span {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 35px;
+    text-transform: capitalize;
+    color: #8f00ff;
+    margin-right: 5%;
+}
+#mobile-customers .customer-text p {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 25px;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    color: #ffffff;
+}
+#mobile-customers .customer-gallery {
+    padding: 7% 12% 7% 12%;
+}
+#mobile-customers .customer-gallery img {
+    width: 110px;
+}
+
+/********* mobile case study styles ******/
+#mobile-caseStudy {
+    padding: 7%;
+}
+#mobile-caseStudy .caseStudy-text {
+}
+#mobile-caseStudy .caseStudy-text h1 {
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 40px;
+    text-transform: capitalize;
+    color: #ffffff;
+}
+#mobile-caseStudy .caseStudy-text p {
+    font-weight: 300;
+    width: 200px;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+
+    color: #ffffff;
+}
+#mobile-caseStudy .caseStudy-text a {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+}
+#mobile-caseStudy .mob-casestudy-carousel {
+    margin-top: 20%;
+}
+
+#mobile-caseStudy .mob-casestudy-carousel .owl-carousel .owl-item img {
+    width: 65%;
+    transform: translate(25%, 0%);
+}
+
+#mobile-caseStudy .owl-nav .owl-next {
+    background: transparent !important;
+    text-transform: capitalize !important;
+    color: #fff;
+}
+
+/************ mobile clients styles ***********/
+#mobile-client {
+    padding: 7%;
+}
+
+#mobile-client h1 {
+    width: 140px;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 25px;
+    color: #ffffff;
+}
+#mobile-client .client-details {
+    margin: 7% 0 0% 0;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    color: #ffffff;
+}
+#mobile-client .mob-client-img {
+    height: 172px;
+}
+#mobile-client .mob-client-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#mobile-client .client-comment p {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 5%;
+}
+
+#mobile-client .owl-nav .owl-prev,
+.owl-next {
+    color: #fff;
+}
+
+#mobile-client .owl-nav {
+    text-align: left !important;
+    margin-top: 7% !important;
+}
+
+#mobile-client .owl-nav .owl-next {
+    background: transparent !important;
+    text-transform: capitalize !important;
+    color: #fff;
+}
+
+/********* mobile media *********/
+#mobile-media {
+    padding: 7%;
+}
+#mobile-media h1 {
+    width: 136px;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 25px;
+    color: #ffffff;
+    margin-bottom: 8%;
+}
+#mobile-media .mob-media-text {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.04em;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 8%;
+}
+
+#mobile-media .mob-media-img {
+    height: 350px;
+    margin-bottom: 10%;
+}
+#mobile-media .mob-media-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#mobile-media .mob-client-start-project {
+}
+#mobile-media .mob-client-start-project a {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    color: #8f00ff;
+    display: block;
+    text-decoration: none;
+    margin-bottom: 5%;
+}
+#mobile-media .mob-client-start-project p {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.04em;
+    color: #d0d4ea;
+    width: 82%;
+}
+
+/********* about us **************/
+#mobile-aboutus {
+    padding: 7%;
+    margin-top: 5%;
+}
+#mobile-aboutus h1 {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 39px;
+    color: #ffffff;
+}
+#mobile-aboutus .aboutus-img {
+    height: 150px;
+    width: 100%;
+    margin-bottom: 5%;
+}
+#mobile-aboutus .aboutus-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#mobile-aboutus .aboutus-progressbar {
+}
+#mobile-aboutus .aboutus-scrollbox {
+    width: 100%;
+    height: 500px;
+    overflow-y: scroll;
+    text-align: left;
+}
+#mobile-aboutus .aboutus-scrollbox::-webkit-scrollbar {
+    display: none;
+}
+#mobile-aboutus .aboutus-scrollbox .scroll-item {
+    padding: 5% 0 5% 0;
+    border-top: 1px solid #fafafa;
+}
+#mobile-aboutus .aboutus-scrollbox .scroll-item h4 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 180%;
+    color: #fff;
+}
+#mobile-aboutus .aboutus-scrollbox .scroll-item:nth-child(1) h4 {
+    color: #8f00ff;
+}
+#mobile-aboutus .aboutus-scrollbox .scroll-item p {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.04em;
+    color: #d0d4ea;
+}
+
+/********** contact page ******/
+
+#mobile-contact {
+    padding: 7%;
+}
+#mobile-contact h1 {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 35px;
+    color: #ffffff;
+    width: 233px;
+    margin-top: 10%;
+    padding: 0 15%;
+    text-align: center;
+}
+#mobile-contact .lets-talk {
+    margin: 10% 0 10% 0;
+}
+
+#mobile-contact .lets-talk a {
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+    width: 160px;
+    background: transparent;
+}
+#mobile-contact .mob-contact-product {
+}
+#mobile-contact .mob-contact-product h5 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 138%;
+    color: #eeeeee;
+}
+#mobile-contact .mob-contact-product ul {
+    margin: 10% 0;
+    padding: 0;
+    list-style-type: none;
+}
+#mobile-contact .mob-contact-product ul li {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 172%;
+    margin-top: 5%;
+    color: #acafb8;
+}
+#mobile-contact .mob-contact-product ul li a {
+    color: #acafb8;
+    display: inline-block;
+    text-decoration: none;
+}
+#mobile-contact .mob-contact-product p:nth-of-type(1) {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+    color: #d0d4ea;
+}
+#mobile-contact .mob-contact-product p:nth-of-type(2) {
+    font-weight: 200;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0.04em;
+    color: #d0d4ea;
+}
+#mobile-contact .mob-contact-product p:nth-of-type(2) img {
+}
+#mobile-contact .company {
+}
+#mobile-contact .mob-contact-company h5 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 138%;
+    color: #eeeeee;
+}
+#mobile-contact .mob-contact-company ul {
+    padding: 0;
+    list-style-type: none;
+}
+#mobile-contact .mob-contact-company ul li a {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 172%;
+    margin-top: 5%;
+    color: #acafb8;
+    display: inline-block;
+    text-decoration: none;
+}
+#mobile-contact .mob-contact-company p:nth-of-type(1) {
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0.04em;
+    color: #d0d4ea;
+}
+#mobile-contact .mob-contact-company p:nth-of-type(2) {
+    font-weight: 200;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0.04em;
+    color: #d0d4ea;
+    margin-top: 20%;
+}
+#mobile-contact .mob-contact-company p:nth-of-type(2) img {
+}
+#mobile-contact .mob-social-icon {
+    margin-top: 5%;
+}
+#mobile-contact .mob-social-icon ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    margin-bottom: 5%;
+}
+#mobile-contact .mob-social-icon ul li {
+    margin: 0 0;
+}
+#mobile-contact .mob-social-icon ul li a img {
+    width: 40px;
+    height: 40px;
+}
+#mobile-contact .all-right {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 172%;
+    letter-spacing: -0.05em;
+    font-feature-settings: "salt" on, "liga" off;
+    color: #acafb8;
+    text-align: center;
+}
+
+#mobile-start-project {
+    padding: 7%;
+}
+#mobile-start-project h1 {
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+#mobile-start-project h1 span:nth-of-type(1) {
+    display: block;
+}
+#mobile-start-project h1 span:nth-of-type(2) {
+    display: block;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+#mobile-start-project .mob-start-project-menu {
+    margin: 8% 0;
+}
+#mobile-start-project .mob-start-project-menu .mob-start-project-menu1 {
+}
+#mobile-start-project .mob-start-project-menu .mob-start-project-menu1 ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+#mobile-start-project .mob-start-project-menu .mob-start-project-menu1 ul li {
+}
+#mobile-start-project .mob-start-project-menu .mob-start-project-menu1 ul li a {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 15px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+}
+#mobile-start-project .mob-start-project-menu .mob-start-project-menu2 {
+}
+#mobile-start-project .mob-start-project-menu .mob-start-project-menu2 ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+#mobile-start-project .mob-start-project-menu .mob-start-project-menu2 ul li {
+}
+#mobile-start-project .mob-start-project-menu .mob-start-project-menu2 ul li a {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 15px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+}
+#mobile-start-project .start-project-social-btn-group {
+}
+#mobile-start-project .start-project-social-btn-group input[type="checkbox"] {
+    display: none;
+}
+#mobile-start-project
+    .start-project-social-btn-group
+    input[type="checkbox"]
+    + label {
+    cursor: pointer;
+}
+#mobile-start-project
+    .start-project-social-btn-group
+    input[type="checkbox"]:checked
+    + label {
+    background: #fff;
+    color: #000;
+}
+
+#mobile-start-project
+    .start-project-social-btn-group
+    .start-project-social-btn-group-first-row {
+    margin-bottom: 1%;
+}
+#mobile-start-project
+    .start-project-social-btn-group
+    .start-project-social-btn-group-first-row
+    label {
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 60px;
+    padding: 3px 20px;
+    line-height: 25px;
+    color: #fff;
+    font-size: 13px;
+    width: fit-content;
+}
+/* #mobile-start-project
+    .start-project-social-btn-group
+    .start-project-social-btn-group-first-row
+    label:nth-of-type(2) {
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 60px;
+    padding: 3px 20px;
+    line-height: 25px;
+    margin-left: 20px;
+    color: #fff;
+    font-size: 13px;
+} */
+
+#mobile-start-project .start-project-form input {
+    width: 100%;
+    background: #000;
+    border: none;
+    border-bottom: 0.25px solid #fff;
+    border-radius: 0;
+    font-style: normal;
+    font-weight: 275;
+    font-size: 15px;
+    line-height: 1.5rem;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+    font-weight: 400;
+    outline: none;
+}
+#mobile-start-project .start-project-form button {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: capitalize;
+    color: #ffffff;
+    background: transparent;
+    border: transparent;
+    margin-left: 0;
+    padding-left: 0;
+}
+#mobile-start-project .start-project-form {
+    margin-top: 10%;
+}
+#mobile-start-project .start-project-info {
+    text-align: right;
+    color: #fff;
+    font-size: 12px;
+}
+
+.active-service {
+    color: #8f00ff !important;
+}
+#mobile-start-project .m-ai,
+.m-wd,
+.m-app-d,
+.m-dm {
+    display: none;
+}
+
+/*********** mobile blogs **********/
+#mobile-blogs {
+    padding: 7%;
+}
+#mobile-blogs h1 {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 35px;
+    color: #ffffff;
+    width: 100%;
+    margin-bottom: 10%;
+    padding: 0 15%;
+    text-align: center;
+}
+#mobile-blogs .mob-first-blog {
+    height: 200px;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 5%;
+}
+#mobile-blogs .mob-first-blog img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+#mobile-blogs .mob-first-blog .mob-blog-title {
+    color: #fff;
+    position: absolute;
+    bottom: 40px;
+    right: 0;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 0 40px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+#mobile-blogs .mob-first-blog .mob-blog-date {
+    position: absolute;
+    bottom: 16px;
+    left: 40px;
+    font-size: 10px;
+    color: #fff;
+    font-weight: 400;
+}
+#mobile-blogs .mob-second-blog {
+    height: 200px;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 5%;
+}
+#mobile-blogs .mob-second-blog .mob-blog-title {
+    color: #fff;
+    position: absolute;
+    bottom: 40px;
+    right: 0;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 0 40px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+#mobile-blogs .mob-second-blog .mob-blog-date {
+    position: absolute;
+    bottom: 16px;
+    left: 40px;
+    font-size: 10px;
+    color: #fff;
+    font-weight: 400;
+}
+#mobile-blogs .mob-second-blog img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+#mobile-blogs .mob-third-blog {
+    height: 200px;
+    position: relative;
+}
+#mobile-blogs .mob-third-blog img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+#mobile-blogs .mob-third-blog .mob-blog-title {
+    color: #fff;
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+    font-size: 10px;
+    font-weight: 500;
+    padding: 0 40px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+#mobile-blogs .mob-third-blog .mob-blog-date {
+    position: absolute;
+    bottom: 16px;
+    left: 40px;
+    font-size: 10px;
+    color: #fff;
+    font-weight: 400;
+}
+#mobile-blogs .mob-fourth-blog {
+    height: 200px;
+    position: relative;
+}
+#mobile-blogs .mob-fourth-blog img {
+    height: 100%;
+    border-radius: 15px;
+    width: 100%;
+}
+#mobile-blogs .mob-fourth-blog .mob-blog-title {
+    color: #fff;
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+    font-size: 10px;
+    font-weight: 500;
+    padding: 0 40px;
+    cursor: pointer;
+    transform: translateX(-26%);
+}
+
+/************** mobile career ************/
+#mobile-career {
+    padding: 7%;
+}
+#mobile-career h1 {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 30px;
+    color: #ffffff;
+    margin-top: 15%;
+}
+
+#mobile-career .career-section {
+    margin-top: 10%;
+}
+#mobile-career .career-section .career-item {
+    margin-bottom: 10%;
+}
+#mobile-career .career-section .career-item .career-img-box {
+    width: 100%;
+    height: 100%;
+}
+#mobile-career .career-section .career-item .career-img-box img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+#mobile-career .career-section .career-item .career-position {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #ffffff;
+    margin-top: 5%;
+}
+#mobile-career .career-section .career-item .deadline {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+}
+
+/************** mobile gallery ********/
+
+#mobile-gallery {
+    padding: 7%;
+    margin-top: 20%;
+}
+#mobile-gallery .gallery-bg[data-v-1b29d588] {
+    background-image: url(/images/gallery-bg.svg?42c62f90ab7c44fc2056a14300135e09);
+    height: 200px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+#mobile-gallery .gallery-bg h1 {
+    position: absolute;
+    left: 20px;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 25px;
+    color: #ffffff;
+}
+#mobile-gallery .gallery-section {
+    margin-top: 20%;
+}
+
+#mobile-gallery .gallery-section .gallery-first-col .odd-item {
+    margin-bottom: 5%;
+    width: 100%;
+}
+#mobile-gallery .gallery-section .gallery-first-col .odd-item img {
+    height: 100%;
+    width: 100%;
+}
+#mobile-gallery .gallery-section .gallery-first-col .even-item {
+}
+#mobile-gallery .gallery-section .gallery-first-col .even-item img {
+    height: 100%;
+    width: 100%;
+}
+
+#mobile-gallery .gallery-section .gallery-second-col .odd-item {
+    margin-bottom: 5%;
+}
+#mobile-gallery .gallery-section .gallery-second-col .odd-item img {
+    width: 100%;
+}
+#mobile-gallery .gallery-section .gallery-second-col .even-item {
+    margin-bottom: 5%;
+    width: 100%;
+}
+#mobile-gallery .gallery-section .gallery-second-col .even-item img {
+    height: 100%;
+    width: 100%;
+}
+
+/************ mobile Team **************/
+#mobile-team {
+    margin-top: 15%;
+    padding: 7%;
+}
+#mobile-team .mob-team-upper-content {
+}
+#mobile-team .mob-team-upper-content p:nth-of-type(1) {
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 400;
+}
+#mobile-team .mob-team-upper-content h1 {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 30px;
+    /* display: flex; */
+    /* align-items: center; */
+    text-align: center;
+    color: #ffffff;
+}
+#mobile-team .mob-team-upper-content p:nth-of-type(2) {
+    text-align: center;
+    margin-top: 5%;
+}
+
+#mobile-team .mob-team-upper-content p:nth-of-type(2) img {
+    height: 120px;
+}
+#mobile-team .mob-team-upper-content p:nth-of-type(3) {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #d0d4ea;
+    padding: 2% 8%;
+}
+
+#mobile-team .team-gallery {
+    margin-top: 10%;
+}
+#mobile-team .team-gallery .team-col-1 .team-gallery-img {
+    width: 100%;
+    margin-bottom: 5%;
+}
+#mobile-team .team-gallery .team-col-2 .team-gallery-img {
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+/************** menu  **************/
+#mobile-menu {
+    width: 0%;
+    height: 70vh;
+    position: absolute;
+    top: 0;
+    left: 500px;
+    background: #000;
+    transition: all 0.5s ease;
+    z-index: 5;
+    display: block;
+    margin-top: 30%;
+}
+#mobile-menu .mob-menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+#mobile-menu p a {
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 26px;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/***********mobile blog-details**********/
+
+#mobile-blog-details {
+    margin-top: 20%;
+    position: absolute;
+    left: 500px;
+}
+.showBlogMobile {
+    left: 0 !important;
+}
+#mobile-blog-details .mob-blog-content {
+}
+#mobile-blog-details .mob-blog-content .mob-blog-title-section {
+    background-image: url(/images/blog-details-bg.svg?5951435ad1236328299f06e41a766054);
+    width: 100%;
+    height: 326px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#mobile-blog-details .mob-blog-content .mob-blog-title-section p {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    /* display: flex; */
+    /* align-items: flex-end; */
+    color: #ffffff;
+    position: absolute;
+    bottom: 35%;
+    left: 10%;
+}
+#mobile-blog-details .mob-blog-content .mob-blog-title-section h1 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 25px;
+    color: #ffffff;
+    bottom: 15%;
+    left: 10%;
+    line-height: 30px;
+    position: absolute;
+}
+#mobile-blog-details .mob-blog-content .mob-blog-text-section {
+    width: 100%;
+    margin: 0 auto;
+}
+#mobile-blog-details .mob-blog-content .mob-blog-text-section img {
+    width: 100%;
+}
+#mobile-blog-details .mob-more-blog-content {
+    padding: 8%;
+}
+#mobile-blog-details .mob-more-blog-content p {
+    font-weight: 275;
+    font-size: 10px;
+    line-height: 15px;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+}
+#mobile-blog-details .mob-more-blog-content .mob-more-post {
+}
+#mobile-blog-details .mob-more-blog-content .mob-more-post img {
+    width: 100%;
+    border-radius: 10px;
+}
+#mobile-blog-details .mob-more-blog-content .mob-more-post .mob-post-title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+}
+#mobile-blog-details .mob-more-blog-content .mob-more-post .mob-post-date {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    color: #a8a8a8;
+}
+
+/*********** FAQ's ***********************/
+
+#faq {
+    padding: 7%;
+    margin-top: 20%;
+}
+#faq h1 {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+}
+
+#faq .faq-img {
+    text-align: center;
+    margin-top: 15%;
+}
+
+#faq p {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 138%;
+    font-feature-settings: "salt" on, "liga" off;
+    color: rgba(238, 238, 238, 0.5);
+}
+
+#faq ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+#faq ul li {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 30px;
+    color: #ffffff;
+}
+#faq ul li img {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    border-radius: 15%;
+}
+
+/*************** service ************ */
+
+#mobile-service {
+    margin-top: 10%;
+    padding: 7%;
+    position: relative;
+}
+
+#mobile-service .mob-carousel .carousel-content .lottie {
+    height: 175px;
+    margin-bottom: 7%;
+}
+#mobile-service .mob-carousel .carousel-content h1 {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+#mobile-service .mob-carousel .carousel-content p {
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    color: #ffffff;
+    margin-bottom: 20%;
+}
+
+#mobile-service .mob-carousel .carousel-content .slide-name {
+}
+#mobile-service .mob-carousel .carousel-content .slide-name .prev-page,
+.next-page {
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    text-transform: capitalize;
+    color: rgba(255, 255, 255, 0.25);
+}
+
+#mobile-service .slick-slide {
+    height: 67% !important;
+}
+
+#mobile-service .mob-carousel .carousel-content .prev-page {
+    text-align: center;
+}
+#mobile-service .mob-carousel .carousel-content .next-page {
+    text-align: center;
+}
+#mobile-service .mob-carousel .carousel-content .slide-name .current-page {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+}
+
+#mobile-service .carousel-controller {
+    margin-bottom: 5%;
+    position: absolute;
+    bottom: 130px;
+    width: 85%;
+}
+#mobile-service .carousel-controller a {
+    color: #8f00ff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    color: #8f00ff;
+}
+#mobile-service .carousel-controller button {
+    border: none;
+    background: transparent;
+    color: #fff;
+}
+#mobile-service .lottie img {
+    width: 100%;
+    height: 100%;
+}
+
+#mobile-service .slick-dots li {
+    margin: 0 0 !important;
+}
+
+#mobile-service .slick-dots li button:before {
+    font-size: 10px !important;
+    opacity: 1 !important;
+    color: #fff !important;
+    line-height: 0px !important;
+}
+
+/************************ mobile service details********* */
+
+/* service detail css mobile */
+#mobile-service-detail {
+    margin-top: 10%;
+    padding: 7%;
+}
+#mobile-service-detail .mob-team-service-detail {
+    margin-top: 10%;
+}
+#mobile-service-detail .mob-team-service-detail h1 {
+    justify-content: left;
+    color: #fff;
+}
+#mobile-service-detail .mob-team-service-detail h2 {
+    justify-content: left;
+    color: #fff;
+}
+
+#mobile-service-detail .serv-details-section {
+    margin: 0, 24px;
+}
+#mobile-service-detail .serv-details-section > h1 {
+    text-align: center;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    color: #fff;
+}
+#mobile-service-detail .serv-details-section > p {
+    width: 214px;
+    margin: 6px auto;
+    text-align: center;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: #fff;
+}
+
+#mobile-service-detail .mob-team-service-detail .serv-detail-text {
+    justify-content: left;
+    color: #fff;
+}
+#mobile-service-detail .mob-team-service-detail .serv-detail-strt-proj {
+    justify-content: left;
+    color: #8f00ff;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+}
+#mobile-service-detail .mob-team-service-detail .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+#mobile-service-detail .mob-team-service-detail .service-details-section {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#mobile-service-detail .serv-details-section .serv-detail-text2 {
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+#mobile-service-detail .id-design-service-menu {
+    margin: 24px 24px;
+}
+#mobile-service-detail
+    .serv-details-section
+    .id-design-service-menu
+    .id-design-service-menu1 {
+}
+#mobile-service-detail
+    .serv-details-section
+    .id-design-service-menu
+    .id-design-service-menu1
+    ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+#mobile-service-detail
+    .serv-details-section
+    .id-design-service-menu
+    .id-design-service-menu1
+    ul
+    li {
+}
+#mobile-service-detail
+    .id-design-service-menu
+    .id-design-service-menu1
+    ul
+    li
+    a {
+    text-decoration: none;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 15px;
+    color: #ffffff;
+    margin: 0 4px;
+    /* identical to box height */
+    text-align: center;
+}
+#mobile-service-detail.serv-details-section
+    .id-design-service-menu
+    .id-design-service-menu2 {
+}
+#mobile-service-detail
+    .serv-details-section
+    .id-design-service-menu
+    .id-design-service-menu2
+    ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: right;
+    justify-content: right;
+}
+#mobile-service-detail
+    .serv-details-section
+    .id-design-service-menu
+    .id-design-service-menu2
+    ul
+    li {
+}
+#mobile-service-detail
+    .serv-details-section
+    .id-design-service-menu
+    .id-design-service-menu2
+    ul
+    li
+    a {
+    text-decoration: none;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 15px;
+    color: #ffffff;
+    margin: 0 4px;
+    /* identical to box height */
+
+    text-align: center;
+}
+#mobile-service-detail .proj-client-number-menu {
+    margin: 50px 24px;
+}
+#mobile-service-detail
+    .serv-details-section
+    .proj-client-number-menu
+    .proj-number-menu1 {
+}
+#mobile-service-detail
+    .serv-details-section
+    .proj-client-number-menu
+    .proj-number-menu1
+    ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+#mobile-service-detail
+    .serv-details-section
+    .proj-client-number-menu
+    .proj-number-menu1
+    ul
+    li {
+}
+#mobile-service-detail
+    .serv-details-section
+    .proj-client-number-menu
+    .proj-number-menu1
+    ul
+    li
+    a {
+    text-decoration: none;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    color: #ffffff;
+    margin: 0 4px;
+    /* identical to box height */
+    text-align: center;
+}
+#mobile-service-detail
+    .serv-details-section
+    .proj-client-number-menu
+    .proj-number-menu1
+    .project-number {
+    color: #8f00ff;
+    font-size: 36px;
+}
+#mobile-service-detail
+    .serv-details-section
+    .proj-client-number-menu
+    .client-number-menu2 {
+}
+#mobile-service-detail
+    .serv-details-section
+    .proj-client-number-menu
+    .client-number-menu2
+    ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+#mobile-service-detail
+    .serv-details-section
+    .proj-client-number-menu
+    .client-number-menu2
+    ul
+    li {
+}
+#mobile-service-detail
+    .serv-details-section
+    .proj-client-number-menu
+    .client-number-menu2
+    ul
+    li
+    a {
+    text-decoration: none;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    color: #ffffff;
+    margin: 0 4px;
+    /* identical to box height */
+    text-align: center;
+}
+
+#mobile-service-detail .serv-details-section .how-to-help {
+    white-space: nowrap;
+}
+
+#mobile-service-detail
+    .serv-details-section
+    .proj-client-number-menu
+    .client-number-menu2
+    .client-number {
+    color: #8f00ff;
+    font-size: 36px;
+    /* padding-left: 16px; */
+}
+
+#mobile-service-detail
+    .serv-details-section
+    .proj-client-number-menu
+    .project-completed {
+    white-space: nowrap;
+}
+
+/* #mobile-service-detail .serv-details-section .proj-client-number-menu .client-number-menu2 .client-number{
+  border-left: 1px solid #ffffff;
+  margin-left: 16px;
+} */
+#mobile-service-detail .best-services-menu {
+    margin: 50px 24px 10px 24px;
+}
+#mobile-service-detail
+    .serv-details-section
+    .best-services-menu
+    .best-services-menu1 {
+}
+#mobile-service-detail
+    .serv-details-section
+    .best-services-menu
+    .best-services-menu1
+    ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+#mobile-service-detail
+    .serv-details-section
+    .best-services-menu
+    .best-services-menu1
+    ul
+    li {
+}
+#mobile-service-detail
+    .serv-details-section
+    .best-services-menu
+    .best-services-menu1
+    ul
+    li
+    a {
+    text-decoration: none;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    color: #ffffff;
+    margin: 0 4px;
+    /* identical to box height */
+    text-align: center;
+}
+#mobile-service-detail
+    .serv-details-section
+    .best-services-menu
+    .best-services-menu2 {
+}
+#mobile-service-detail
+    .serv-details-section
+    .best-services-menu
+    .best-services-menu2
+    ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+#mobile-service-detail
+    .serv-details-section
+    .best-services-menu
+    .best-services-menu2
+    ul
+    li {
+}
+#mobile-service-detail
+    .serv-details-section
+    .best-services-menu
+    .best-services-menu2
+    ul
+    li
+    a {
+    text-decoration: none;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    color: #ffffff;
+    margin: 0 4px;
+    /* identical to box height */
+    text-align: center;
+}
+#mobile-service-detail .serv-details-section .best-service-paragraph {
+    text-decoration: none;
+    width: 80%;
+    margin: 6px auto;
+    text-align: left;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    display: flex;
+    align-items: left;
+    letter-spacing: 0.04em;
+    color: #fff;
+}
+
+#mobile-service-detail .best-services2-menu {
+    margin: 50px 24px 10px 24px;
+}
+#mobile-service-detail
+    .serv-details-section
+    .best-services2-menu
+    .best-services2-menu1 {
+}
+#mobile-service-detail
+    .serv-details-section
+    .best-services2-menu
+    .best-services2-menu1
+    ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+#mobile-service-detail
+    .serv-details-section
+    .best-services2-menu
+    .best-services2-menu1
+    ul
+    li {
+}
+#mobile-service-detail
+    .serv-details-section
+    .best-services2-menu
+    .best-services2-menu1
+    ul
+    li
+    a {
+    text-decoration: none;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    color: #ffffff;
+    margin: 0 4px;
+    /* identical to box height */
+    text-align: center;
+}
+#mobile-service-detail
+    .serv-details-section
+    .best-services2-menu
+    .best-services2-menu2 {
+}
+#mobile-service-detail
+    .serv-details-section
+    .best-services2-menu
+    .best-services2-menu2
+    ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+#mobile-service-detail
+    .serv-details-section
+    .best-services2-menu
+    .best-services2-menu2
+    ul
+    li {
+}
+#mobile-service-detail
+    .serv-details-section
+    .best-services2-menu
+    .best-services2-menu2
+    ul
+    li
+    a {
+    text-decoration: none;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    color: #ffffff;
+    margin: 0 4px;
+    /* identical to box height */
+    text-align: center;
+}
+#mobile-service-detail .serv-details-section .best-service2-paragraph {
+    text-decoration: none;
+    width: 80%;
+    margin: 6px auto;
+    text-align: left;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    display: flex;
+    align-items: left;
+    letter-spacing: 0.04em;
+    color: #fff;
+}
+
+#mobile-service-detail .best-services3-menu {
+    margin: 50px 24px 10px 24px;
+}
+#mobile-service-detail
+    .serv-details-section
+    .best-services3-menu
+    .best-services3-menu1 {
+}
+#mobile-service-detail
+    .serv-details-section
+    .best-services3-menu
+    .best-services3-menu1
+    ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+#mobile-service-detail
+    .serv-details-section
+    .best-services3-menu
+    .best-services3-menu1
+    ul
+    li {
+}
+#mobile-service-detail
+    .serv-details-section
+    .best-services3-menu
+    .best-services3-menu1
+    ul
+    li
+    a {
+    text-decoration: none;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    color: #ffffff;
+    margin: 0 4px;
+    /* identical to box height */
+    text-align: center;
+}
+#mobile-service-detail
+    .serv-details-section
+    .best-services3-menu
+    .best-services3-menu2 {
+}
+#mobile-service-detail
+    .serv-details-section
+    .best-services3-menu
+    .best-services3-menu2
+    ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+#mobile-service-detail
+    .serv-details-section
+    .best-services3-menu
+    .best-services3-menu2
+    ul
+    li {
+}
+#mobile-service-detail
+    .serv-details-section
+    .best-services3-menu
+    .best-services3-menu2
+    ul
+    li
+    a {
+    text-decoration: none;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    color: #ffffff;
+    margin: 0 4px;
+    /* identical to box height */
+    text-align: center;
+}
+#mobile-service-detail .serv-details-section .best-service3-paragraph {
+    text-decoration: none;
+    width: 80%;
+    margin: 6px auto;
+    text-align: left;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    display: flex;
+    align-items: left;
+    letter-spacing: 0.04em;
+    color: #fff;
+}
+
+#mobile-service-detail .best-services4-menu {
+    margin: 50px 24px 10px 24px;
+}
+#mobile-service-detail
+    .serv-details-section
+    .best-services4-menu
+    .best-services4-menu1 {
+}
+#mobile-service-detail
+    .serv-details-section
+    .best-services4-menu
+    .best-services4-menu1
+    ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+#mobile-service-detail
+    .serv-details-section
+    .best-services4-menu
+    .best-services4-menu1
+    ul
+    li {
+}
+#mobile-service-detail
+    .serv-details-section
+    .best-services4-menu
+    .best-services4-menu1
+    ul
+    li
+    a {
+    text-decoration: none;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    color: #ffffff;
+    margin: 0 4px;
+    /* identical to box height */
+    text-align: center;
+}
+#mobile-service-detail
+    .serv-details-section
+    .best-services2-menu
+    .best-services2-menu2 {
+}
+#mobile-service-detail
+    .serv-details-section
+    .best-services4-menu
+    .best-services4-menu2
+    ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+#mobile-service-detail
+    .serv-details-section
+    .best-services2-menu
+    .best-services2-menu2
+    ul
+    li {
+}
+#mobile-service-detail
+    .serv-details-section
+    .best-services4-menu
+    .best-services4-menu2
+    ul
+    li
+    a {
+    text-decoration: none;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    color: #ffffff;
+    margin: 0 4px;
+    /* identical to box height */
+    text-align: center;
+}
+#mobile-service-detail .serv-details-section .best-service4-paragraph {
+    text-decoration: none;
+    width: 80%;
+    margin: 6px auto;
+    text-align: left;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    display: flex;
+    align-items: left;
+    letter-spacing: 0.04em;
+    color: #fff;
+}
+#mobile-service-detail .serv-details-section .designer-image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#mobile-service-detail .serv-details-section .designer-image {
+    width: 50%;
+    margin: 15px auto;
+}
+#mobile-service-detail .serv-details-section .best-service-paragraph2 {
+    text-decoration: none;
+    width: 80%;
+    margin: 6px auto;
+    text-align: center;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.04em;
+    color: #fff;
+}
+#mobile-service-detail .serv-details-section .design-service-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    height: 43px;
+    border: 1px solid #a855f740;
+    border-radius: 5px;
+    background: rgba(168, 85, 247, 0.05);
+}
+#mobile-service-detail .serv-details-section .design-service-boxtext {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 22px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #ffffff;
+}
+
+#mobile-service-detail .serv-details-section .latestwork-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+    height: auto;
+}
+#mobile-service-detail .serv-details-section .latestwork-image-name {
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 22px;
+    /* identical to box height */
+    text-align: center;
+    color: #ffffff;
+}
+#mobile-service-detail .serv-details-section .people-reviews-box {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    height: 180px;
+    width: 100%;
+    border: 1px solid #ffffff40;
+    border-radius: 10px;
+}
+#mobile-service-detail .serv-details-section .people-reviews-boxtext {
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 22px;
+    /* identical to box height */
+    text-align: center;
+    color: #ffffff;
+}
+#mobile-service-detail .serv-details-section .people-reviews-name {
+    justify-content: right;
+    align-items: right;
+    margin: 10px 5px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 22px;
+    /* identical to box height */
+    text-align: right;
+    color: #ffffff;
+}
+#mobile-service-detail .serv-details-section .reviews-image-container {
+    margin: 0;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: -12px;
+    left: 60px;
+}
+/********** Mobile Case  */
+
+@media screen and (min-width: 428px) {
+    #mobile-home,
+    #mobile-customers,
+    #mobile-caseStudy,
+    #mobile-header,
+    #mobile-client,
+    #mobile-media,
+    #mobile-aboutus,
+    #mobile-contact,
+    #mobile-start-project,
+    #mobile-blogs,
+    #mobile-career,
+    #mobile-gallery,
+    #mobile-team,
+    #mobile-menu,
+    #mobile-blog-details,
+    #faq,
+    #mobile-service,
+    #mobile-service-detail {
+        display: none;
+        z-index: 1;
+    }
+}

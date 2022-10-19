@@ -22,8 +22,30 @@ class BlogController extends Controller
 
         $blogs = Blog::all();
 
+        $moreblogs = '';
+        foreach ($blogs as $blog) {
+            $moreblogs .= '<div class="other-blog-section">
+                                <div class="other-blog-content d-flex justify-content-between">
+                                    <div class="other-blog-text">
+                                        <p class="other-blog-date">
+                                            <span style="margin-right: 15px">weekly update </span><span>' . date("d-m-Y", strtotime($blog->created_at)) . '</span>
+                                        </p>
+                                        <p class="other-blog-title" onclick="showBlog(' . $blog->id . ')">
+                                            ' . substr($blog->title, 100) . '
+                                        </p>
+                                        <p class="other-blog-details">
+                                            ' . substr($blog->title, 150) . '
+
+                                        </p>
+                                    </div>
+                                    <div class="other-blog-image">
+                                        <img class="cancel-menu" src="' . asset('/assets/img/blogs/' . $blog->thumbnail) . '" />
+                                    </div>
+                                </div>
+                             </div>';
+        }
         return response()->json([
-            'blogs' => $blogs
+            'blogs' => $moreblogs
         ]);
     }
 
@@ -32,7 +54,7 @@ class BlogController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function getBlog($id)
+    public function getBlog(Request $request, $id)
     {
         //get the blog data
         $blog = Blog::find($id);
@@ -40,11 +62,39 @@ class BlogController extends Controller
         $blogDate = date('d M Y', $blogDate);
         $blogs = Blog::orderBy('id', 'desc')->skip(1)->take(2)->get();
 
-        return response()->json([
-            'blog' => $blog,
-            'blogs' => $blogs,
-            'blogDate' => $blogDate
-        ]);
+        $moreblogs = '';
+        foreach ($blogs as $blog) {
+            $moreblogs .= '<div class="other-blog-section">
+                                <div class="other-blog-content d-flex justify-content-between">
+                                    <div class="other-blog-text">
+                                        <p class="other-blog-date">
+                                            <span style="margin-right: 15px">weekly update </span><span>' . date("d-m-Y", strtotime($blog->created_at)) . '</span>
+                                        </p>
+                                        <p class="other-blog-title" onclick="showBlog(' . $blog->id . ')">
+                                            ' . substr($blog->title, 100) . '
+                                        </p>
+                                        <p class="other-blog-details">
+                                            ' . substr($blog->title, 150) . '
+
+                                        </p>
+                                    </div>
+                                    <div class="other-blog-image">
+                                        <img class="cancel-menu" src="' . asset('/assets/img/blogs/' . $blog->thumbnail) . '" />
+                                    </div>
+                                </div>
+                             </div>';
+        }
+
+
+
+        if ($request->ajax()) {
+
+            return response()->json([
+                'blog' => $blog,
+                'moreblogs' => $moreblogs,
+                'blogDate' => $blogDate
+            ]);
+        }
     }
 
     /**

@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [UserPageController::class, 'home'])->name('home');
+Route::get('/', [UserPageController::class, 'home'])->name('home')->middleware('screenWidthCheck');
 Route::get('/start-project', [UserPageController::class, 'startProject'])->name('startProject');
 Route::get('/customers', [UserPageController::class, 'customers'])->name('customers');
 Route::get('/case-study', [UserPageController::class, 'caseStudy'])->name('caseStudy');
@@ -30,6 +30,12 @@ Route::get('/about-us', [UserPageController::class, 'aboutUs'])->name('about');
 Route::get('/testimonials', [UserPageController::class, 'testimonials'])->name('testimonials');
 Route::get('/media-buying', [UserPageController::class, 'mediaBuying'])->name('media.buying');
 Route::get('/category', [UserPageController::class, 'category'])->name('category');
+Route::view('/career', 'user.components.career');
+Route::view('/gallery', 'user.components.gallery');
+Route::view('/team', 'user.components.team');
+Route::view('/faq', 'user.components.faq');
+Route::view('/casestudy/details', 'user.components.caseStudyDetails');
+Route::view('/mobile/blog/details', 'user.components.mobileBlogDetails');
 
 Route::prefix('admin')->name('admin.')->group(function () {
 

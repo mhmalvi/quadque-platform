@@ -12,13 +12,15 @@ class UserPageController extends Controller
     //get the user home page
     public function home()
     {
-        $caseStudyFirstRows = CaseStudy::orderBy('id', 'asc')->skip(0)->take(3)->get();
-        $caseStudySecondRows = CaseStudy::orderBy('id', 'asc')->skip(3)->take(3)->get();
+
+        $caseStudyFirstRows = CaseStudy::orderBy('id', 'asc')->skip(0)->take(4)->get();
+        $caseStudySecondRows = CaseStudy::orderBy('id', 'asc')->skip(3)->take(4)->get();
 
         $firstBlog = Blog::orderBy('id', 'desc')->skip(0)->take(1)->first();
         $firstBlogId = $firstBlog->id;
         $firstBlogThumbnail = $firstBlog->thumbnail;
         $firstBlogTitle = Str::of($firstBlog->title)->limit(90, '...');
+        $firstBlogTitleMobile = Str::of($firstBlog->title)->limit(60, '...');
         $firstBlogDate = strtotime($firstBlog->created_at);
         $firstBlogDate =  date('d  M  Y', $firstBlogDate);
 
@@ -26,6 +28,7 @@ class UserPageController extends Controller
         $secondBlogId = $secondBlog->id;
         $secondBlogThumbnail = $secondBlog->thumbnail;
         $secondBlogTitle = Str::of($secondBlog->title)->limit(90, '...');
+        $secondBlogTitleMobile = Str::of($secondBlog->title)->limit(60, '...');
         $secondBlogDate = strtotime($secondBlog->created_at);
         $secondBlogDate =  date('d  M  Y', $secondBlogDate);
 
@@ -33,6 +36,7 @@ class UserPageController extends Controller
         $thirdBlogId = $thirdBlog->id;
         $thirdBlogThumbnail = $thirdBlog->thumbnail;
         $thirdBlogTitle = Str::of($thirdBlog->title)->limit(90, '...');
+        $thirdBlogTitleMobile = Str::of($thirdBlog->title)->limit(40, '...');
         $thirdBlogDate = strtotime($thirdBlog->created_at);
         $thirdBlogDate =  date('d  M  Y', $thirdBlogDate);
 
@@ -41,17 +45,24 @@ class UserPageController extends Controller
         $fourthBlogThumbnail = $fourthBlog->thumbnail;
         $fourthBlogTitle = Str::of($fourthBlog->title)->limit(90, '...');
 
+
+
+        $screenWidth = $_COOKIE['screenWidth'];
+
         $blogs = [
             'firstBlogId' => $firstBlogId,
             'firstBlogTitle' => $firstBlogTitle,
+            'firstBlogTitleMobile' => $firstBlogTitleMobile,
             'firstBlogThumbnail' => $firstBlogThumbnail,
             'firstBlogDate' => $firstBlogDate,
             'secondBlogId' => $secondBlogId,
             'secondBlogTitle' => $secondBlogTitle,
+            'secondBlogTitleMobile' => $secondBlogTitleMobile,
             'secondBlogThumbnail' => $secondBlogThumbnail,
             'secondBlogDate' => $secondBlogDate,
             'thirdBlogId' => $thirdBlogId,
             'thirdBlogTitle' => $thirdBlogTitle,
+            'thirdBlogTitleMobile' => $thirdBlogTitleMobile,
             'thirdBlogThumbnail' => $thirdBlogThumbnail,
             'thirdBlogDate' => $thirdBlogDate,
             'fourthBlogId' => $fourthBlogId,
@@ -59,14 +70,13 @@ class UserPageController extends Controller
             'fourthBlogThumbnail' => $fourthBlogThumbnail,
         ];
 
-        $blogs = json_encode($blogs);
+        if ($screenWidth > 428) {
 
+            return view('user.components.desktop', compact('caseStudyFirstRows', 'caseStudySecondRows', 'blogs'));
+        } else {
 
-
-
-
-
-        return view('user.home', compact('caseStudyFirstRows', 'caseStudySecondRows', 'blogs'));
+            return view('user.components.mobile', compact('caseStudyFirstRows', 'caseStudySecondRows', 'blogs'));
+        }
     }
 
     //get the start project page

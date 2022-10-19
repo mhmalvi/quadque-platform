@@ -2,7 +2,7 @@
    
         <div class="header-content">
                 <div class="icon">
-                <a style="text-decoration:none;" href="#home"><img src="{{ asset('assets/img/icon.png') }}" width="50" height="44"></a>
+                <a style="text-decoration:none;" href="{{ url('/') }}"><img src="{{ asset('assets/img/icon.png') }}" width="50" height="44"></a>
 
                     
                 </div>
