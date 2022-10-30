@@ -336,7 +336,12 @@
                                                     <li>
                                                         <div class="case-study-box dji">
                                                             <div class="case-study-img">
-                                                                <img src="{{ asset('/assets/img/case_study/'.$caseStudyFirstRow->com_image) }} " />
+                                                             <a href="{{ url('desktop/casestudy/details') }}">
+ 
+                                                                     <img src="{{ asset('/assets/img/case_study/'.$caseStudyFirstRow->com_image) }} " />
+
+                                                             </a>
+                                                              
                                                             </div>
                                                             <div class="case-study-text">
                                                                 {{ $caseStudyFirstRow->com_name }}
@@ -358,7 +363,10 @@
                                                 <li>
                                                     <div class="case-study-box dji">
                                                         <div class="case-study-img">
-                                                            <img src="{{ asset('/assets/img/case_study/'.$caseStudySecondRow->com_image) }}" />
+                                                         <a href="{{ url('desktop/casestudy/details') }}">
+                                                                <img src="{{ asset('/assets/img/case_study/'.$caseStudySecondRow->com_image) }}" />
+
+                                                         </a>
                                                         </div>
                                                         <div class="case-study-text">
                                                             {{ $caseStudySecondRow->com_name }}

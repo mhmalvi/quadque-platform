@@ -63,7 +63,7 @@ function changeCategory(domObj) {
         );
         $(".category-bg").css(
             "background-image",
-            "url(/images/ai-iot-solution.png)"
+            "url(/images/app-development.png)"
         );
     }
 }

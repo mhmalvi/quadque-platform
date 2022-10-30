@@ -9,19 +9,20 @@
     <link rel="icon" type="image/x-icon" href="{{ asset('assets/img/icon.png') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link href="{{ asset('css/app.css') }}" type="text/css" rel="stylesheet" />
-    <link href="{{ asset('assets/css/custom.css')}}" type="text/css" rel="stylesheet" />
     <link href="{{ asset('assets/css/desktop.css')}}" type="text/css" rel="stylesheet" />
     <link href="{{ asset('assets/css/mobile.css')}}" type="text/css" rel="stylesheet" />
     <link href="{{ asset('assets/css/responsiveFont.css')}}" type="text/css" rel="stylesheet" />
     <link href="{{ asset('assets/css/responsiveLayout.css')}}" type="text/css" rel="stylesheet" />
-    <link href="{{ asset('assets/css/animate.css')}}" type="text/css" rel="stylesheet" />
+{{--     <link href="{{ asset('assets/css/animate.css')}}" type="text/css" rel="stylesheet" /> --}}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/fullpage.css')}}" />
-
     <link rel="stylesheet" href="{{ asset('assets/css/slick.css')}}">
     <link rel="stylesheet" href="{{ asset('assets/css/slick.min.css')}}">
-
+    <link href="{{ asset('assets/css/custom.css')}}" type="text/css" rel="stylesheet" />
+ 
     <style>
-    
+
+   
         #blog-details .blog-content .blog-text p span {
         font-size: 18px !important;
         color: #ffffff !important;
@@ -74,26 +75,46 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <script src="{{ asset('js/wow.min.js') }}"></script>
-    <script src="{{ asset('assets/js/custom.js') }}"></script>
+    {{-- <script src="{{ asset('js/wow.min.js') }}"></script> --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="{{ asset('assets/js/jquery.animateTyping.js') }}"></script>
-
     <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "easeInOutCubic". -->
     <script src="{{ asset('assets/js/easings.min.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
-
     <script type="text/javascript" src="{{ asset('assets/js/fullpage.js') }}"></script>
     <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
      <script src="{{ asset('assets/js/slick.js') }}"></script>
+    <script src="{{ asset('assets/js/custom.js') }}"></script>
 
 
 
     <script>
+ 
+
     //case study slide for mobile version
     $(document).ready(function(){
 
-       
+          var wow = new WOW(
+          {
+          boxClass: 'wow', // animated element css class (default is wow)
+          animateClass: 'animated', // animation css class (default is animated)
+          offset: 0, // distance to the element when triggering the animation (default is 0)
+          mobile: true, // trigger animations on mobile devices (default is true)
+          live: true, // act on asynchronously loaded content (default is true)
+          callback: function(box) {
+          // the callback is fired every time an animation is started
+          // the argument that is passed in is the DOM node being animated
+          },
+          scrollContainer: null // optional scroll container selector, otherwise use window
+          }
+          );
+          wow.init();;
+
+
+
+
+            /* case study for mobile version */
             $(".mob-casestudy-carousel .owl-carousel").owlCarousel({
                   
                     loop:true,
@@ -110,11 +131,13 @@
                     items:1,
                     nav:true
 
-            },
-        
-            }
+                },
+            
+                }
 
             });
+
+             /* owl carousel for client in mobile version */
             
              $("#mobile-client .owl-carousel").owlCarousel({
              loop:true,
@@ -135,6 +158,9 @@
 
             });
 
+
+            /* slick carousel for mobile version */
+
              $('.slick-service').slick({
                       autoplay: true,
                       prevArrow:'',
@@ -153,17 +179,15 @@
                             slidesToScroll: 1
                           }
                         }
-                        // You can unslick at a given breakpoint now by adding:
-                        // settings: "unslick"
-                        // instead of a settings object
                       ]
             });
-        
+
+    
+        /* full page scroll for desktop version */        
          $('#fullpage').fullpage({
 
-           anchors: ['home', 'category','customer','about', 'caseStudy', 'testimonial', 'media','blog','startProject','contact'],
-           menu: '#myMenu', 
-
+           /*anchors: ['home', 'category','customer','about', 'caseStudy', 'testimonial', 'media','blog','startProject','contact'],
+           menu: '#myMenu', */
 
              onLeave: (origin, destination, direction, trigger) => {
 
@@ -284,40 +308,12 @@
             }
       
          });
-
-    
-/*
-                let first_page = document.querySelector('.fp-viewing-0');
-                if(first_page){
-                $('.second-page').removeClass('active-page-distance');
-                $('.second-page-number').addClass('page-num-hide');
-                $('.second-page-dot').removeClass('active-page-dot');
-                $('.second-page-line').addClass('line-hide');
-
-
-                $('.first-page').addClass('active-page-distance');
-                $('.first-page-number').removeClass('page-num-hide');
-                $('.first-page-dot').addClass('active-page-dot');
-                $('.first-page-line').removeClass('line-hide'); 
-
-
-                }*/
-
-
-         //methods
     
     });
 
-
-
-
-
-
-
-
-
+      // menu show  for desktop version
+      
       $('.menu').click(function(){
-
   
       $('#menu').css('display', 'block');
       $('#menu').css('transition', 'all 10s');
@@ -326,6 +322,9 @@
       $('#menu').css('z-index','10');
 
       })
+
+
+      // menu hide for desktop version
 
       $('.cancel-menu').click(function(){
 
@@ -338,7 +337,7 @@
       })
 
 
-
+    // cancel blog details modal page for desktop verison
       $('.cancel-blog-details').click(function(){
          $("#fullpage").css("display", "block");
 

@@ -35,6 +35,7 @@
         "vue-marquee-text-component": "^1.2.0",
         "vue-owl-carousel": "^2.0.3",
         "vue-slick-carousel": "^1.0.6",
-        "vue-typical": "^2.1.0"
+        "vue-typical": "^2.1.0",
+        "wow.js": "^1.2.2"
     }
 }

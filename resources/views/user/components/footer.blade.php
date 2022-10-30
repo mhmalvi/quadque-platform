@@ -13,7 +13,7 @@
        
 
 
-                <div id="myMenu"class="page-number">
+              {{--   <div id="myMenu"class="page-number">
 
                     <div data-menuanchor="home" class="active"><a href="#home" class="ten-page-dot page_dot"></a></div>
                     <div data-menuanchor="category"><a href="#category" class="ten-page-dot page_dot"></a></div>
@@ -26,10 +26,7 @@
                     <div data-menuanchor="startProject"><a href="#startProject" class="ten-page-dot page_dot"></a></div>
                     <div data-menuanchor="contact"><a href="#contact" class="ten-page-dot page_dot"></a></div>
 
-
-
-
-                </div>
+                </div> --}}
 
                 <div class="title" >
                   <a href="#startProject" style="text-decoration:none; color:#000">start project</a>

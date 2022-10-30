@@ -9,6 +9,7 @@ body {
     border-bottom: 50px solid #fff;
     border-top: 50px solid #fff;
 }
+
 .main-wrapper {
     width: 100%;
     height: 100%;
@@ -31,6 +32,9 @@ body {
     width: 90%;
     position: fixed;
     left: 5%;
+}
+.wow {
+    visibility: hidden;
 }
 .cus-col-third {
     width: 10%;

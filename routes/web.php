@@ -35,6 +35,7 @@ Route::view('/gallery', 'user.components.gallery');
 Route::view('/team', 'user.components.team');
 Route::view('/faq', 'user.components.faq');
 Route::view('/casestudy/details', 'user.components.caseStudyDetails');
+Route::get('desktop/casestudy/details', [CaseStudyController::class, 'desktopMoreCaseStudy']);
 Route::view('/mobile/blog/details', 'user.components.mobileBlogDetails');
 
 Route::prefix('admin')->name('admin.')->group(function () {

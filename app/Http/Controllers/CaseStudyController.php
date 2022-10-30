@@ -2,11 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use App\Models\CaseStudy;
 use Illuminate\Http\Request;
 
 class CaseStudyController extends Controller
 {
+
+    public function desktopMoreCaseStudy()
+    {
+
+        $blogs = Blog::limit(2)->get();
+
+        return view('user.components.caseStudyDetailsDesktop', compact('blogs'));
+    }
 
 
     public function getMore($num)

@@ -11,14 +11,13 @@
             
 
              <!--------------- Mobile home section ----------------------->
-          
-
-
                 <section id="mobile-home">
-                    <div class="hero-text">
+                    <div class="hero-text wow slideInLeft" data-wow-delay=".5s">
+
                         <h1>We Build Awesome Creation</h1>
                     </div>
-                    <div class="hero-contact-us">
+                    <div class="hero-contact-us wow slideInRight" data-wow-delay=".5s">
+
                         Contact Us<a href="#mobile-contact"><img src="{{ asset('assets/img/contact-icon.png') }}" /></a>
 
                     </div>
@@ -142,8 +141,13 @@
 
                 <section id="mobile-customers">
 
+
                     <div class="customer-text">
-                        <h2>More then valuable <span>100</span>coustomers</h2>
+
+
+                           <h2>More then valuable <span>100</span>coustomers</h2>
+
+                    
                         <p>
                             We create premium web design, though and user-friendly that solve
                             business problems We create premium web design.
@@ -207,9 +211,9 @@
                              
                             </div>
 
-                      </div>
-
                     </div>
+
+                  
                 </section>
 
                 <!--------------- Mobile client section ----------------------->
@@ -662,5 +666,6 @@
                  <div class="all-right">Quadque©2022, All rights reserved</div>
              </section>
     </div>
+
 
 @endsection
