@@ -26,11 +26,11 @@
 
 
                 <h1 class="serv-detail-header">UI/UX<br /></h1>
-                <h2 class="sd-mobile-header">
+                <h5 class="sd-mobile-header">
                     Create Your Business with Digital Design
-                </h2>
+                </h5>
 
-                <p class="serv-detail-text">
+                <p class="serv-detail-text" style="width:40%">
                     We are a team of professionals who are passionate about UI & UX design
                     with any visual solutions. We focus on creating the right UI & UX
                     design for your brand, designing for all taste palettes from Concept
@@ -39,7 +39,7 @@
                     designs and more identical graphics that get results.
                 </p>
                 <h5 class="serv-detail-strt-proj">START PROJECT</h5>
-                <div class="image-container" style="margin: 10% 0;">
+               {{--  <div class="image-container" style="margin: 10% 0;">
 
                     <img class="serv-detail-mob-svg" src="/assets/img/Sing-in-1.svg" style="    display: b list-item;
     display: block;
@@ -47,43 +47,18 @@
     margin: 0 auto;
     width: 350px;" />
 
-                </div>
+                </div> --}}
             </div>
 
-            <div class="serv-details-section">
-               
-            
-                <h3 class="serv-detail-header2">OUR LATEST WORK</h3>
-                <br />
-                <img class="latestwork-image-container" src="{{ asset('assets/img/img-91.png') }}" />
+  
 
-
-                <h1 class="latestwork-image-name">OTOBI Bd lagest furniture Shop</h1>
-                <br />
-                <br />
-                <h1 class="serv-detail-header2">People Talk About Us<br /></h1>
-                <br />
-                <div class="people-reviews-box">
-                    <img class="reviews-image-container" src="{{ asset('assets/img/img-92.png') }}" />
-
-
-                    <h1 class="people-reviews-boxtext">
-                        A software development company in Dhaka. They also work related to
-                        AI, IOT, Digital Marketing services.
-                    </h1>
-                    <h1 class="people-reviews-name">Md Antor Ahmed</h1>
-                </div>
-            </div>
-      
-
-
-        <h1 class="py-1">Insights about my personal and
-            work life, and the in-betweens</h1>
+        <h5 class="py-1">Insights about my personal and
+            work life, and the in-betweens</h5>
 
         <div class="my-2">
             <img src="{{ asset('assets/img/space.svg') }}" style="width:100%; height:500px">
         </div>
-        <p class="my-1" style="font-size:15px; text-align:justify">
+        <p class="my-5" style="font-size:15px; text-align:justify">
 
             We are a team of professionals who are passionate about UI & UX design
             with any visual solutions. We focus on creating the right UI & UX
@@ -104,7 +79,7 @@
             <img class="serv-detail-mob-svg" src="{{ asset('assets/img/space-2.jpg') }}" style="width:100%; height:500px" />
 
         </div>
-        <p class="my-1" style="width:100%; text-align:justify">
+        <p class="my-2 mt-5" style="width:100%; text-align:justify">
 
 
             A logo serves as a company's first touchpoint with consumers. If
@@ -119,7 +94,7 @@
 
 
         </p>
-        <P class="my-1">
+        <P class="my-2">
             There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
             As your brand expands, people will get more familiar with your
             identity, creating the notion that you are trustworthy and
@@ -129,7 +104,7 @@
             of the user experience.
 
         </P>
-        <P class="my-1" style="width:100%; text-align:justify">
+        <P class="my-2" style="width:100%; text-align:justify">
 
             As your brand expands, people will get more familiar with your
             identity, creating the notion that you are trustworthy and
