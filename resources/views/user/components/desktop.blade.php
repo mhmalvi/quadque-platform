@@ -667,7 +667,7 @@
                                  </div>
                              </form>
 
-                            <div class="spaceman"></div>
+                            <div class="spaceman" style="background-image:url('{{ asset('images/spaceman.png') }}')"></div>
                         </div>
                     </div>
                 </div>

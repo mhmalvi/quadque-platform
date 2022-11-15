@@ -778,7 +778,8 @@
     clear: both;
     display: inline-block;
     margin-top: 4rem;
-    margin-left: 9rem;
+    margin-left: 21rem;
+    width: 72%;
 }
 #testimonial .second-section {
     position: absolute;
@@ -789,37 +790,7 @@
     left: 75%;
     padding-left: 25px;
 }
-/*#testimonial .second-section .client-review {
-    width: 440px;
-    height: 144px;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 18px;
-    letter-spacing: 0.04em;
-    text-transform: capitalize;
-    color: #ffffff;
-    margin-left: 20px;
-    margin-top: 130px;
-    margin-bottom: 20px;
-}
-#testimonial .second-section .client-name {
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 18px;
-    letter-spacing: 0.04em;
-    text-transform: capitalize;
-    color: #ffffff;
-    margin-left: 20px;
-}
-#testimonial .second-section .client-designation {
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 18px;
-    letter-spacing: 0.04em;
-    text-transform: capitalize;
-    color: rgba(255, 255, 255, 0.5);
-    margin-left: 20px;
-}*/
+
 #testimonial .second-section .pagination {
     margin-left: 20px;
     margin-top: 6rem;
@@ -855,7 +826,7 @@
 
 #testimonial .second-section {
     position: absolute;
-    left: 75rem;
+    left: 72rem;
     bottom: 16px;
     width: 60%;
     height: 80%;
@@ -1126,9 +1097,7 @@
     width: 22.1rem;
     height: 33.4rem;
     left: 30rem;
-    bottom: -120px;
-
-    background: url("../../../img/spaceman.png");
+    bottom: 0%;
     background-repeat: no-repeat;
     transform: rotate(0.09deg);
     animation: floating 60s ease-in-out infinite;
@@ -1183,7 +1152,7 @@
     width: 65%;
     height: 100%;
     left: 0rem;
-    top: 0rem;
+    top: 0%;
     background-image: url(/images/work-1.png?05ae4eb8e9af6ae9fcf601df7fee24f9);
     background-repeat: no-repeat;
     background-size: cover;
@@ -1235,7 +1204,7 @@
     width: 35%;
     height: 28%;
     right: 0rem;
-    top: 0;
+    top: 0%;
     background-image: url(/images/work-2.png?af3d0852f22ffa1510ec9b4245cb0f40);
     background-repeat: no-repeat;
     background-size: cover;
@@ -1257,7 +1226,7 @@
     width: 35%;
     height: 28%;
     right: 0;
-    top: 14rem;
+    top: 24%;
     background-image: url(/images/work-3.png?f915764480600505dcde54c4e0347322);
     background-repeat: no-repeat;
     background-size: contain;
@@ -1278,7 +1247,7 @@
     position: absolute;
     width: 35%;
     right: 0rem;
-    top: 29rem;
+    top: 48%;
     background-image: url(/images/work-4.png?0c7d16c21abea599b135324272d52c9a);
     background-repeat: no-repeat;
     background-size: cover;
@@ -1809,6 +1778,31 @@
     color: #fff;
 }
 
+/* @media screen and (max-width: 1920px) {
+    #blog .third-section {
+        top: 25rem;
+    }
+    #blog .fourth-section {
+        height: 60%;
+        top: 50rem;
+    }
+    #startProject .header h1 {
+        top: 16.5rem;
+    }
+    #startProject .spaceman {
+        bottom: 0%;
+    }
+    #startProject .project-menu-list {
+        top: 36.5rem;
+    }
+    #startProject .social-media {
+        top: 41.5rem;
+    }
+    #startProject .contact-form {
+        top: 36.5rem;
+    }
+} */
+
 /************** responsive  **************/
 
 @media screen and (max-width: 1600px) {
@@ -1817,19 +1811,18 @@
     }
     #home .video-text {
         top: 40rem;
+        right: 45rem;
     }
     #blog .work-content-body {
         top: 0px;
     }
-    /* #customer .customers-icon-group-one {
-        left: 58rem;
-    }
+
     #customer .customers-icon-group-two {
-        left: 36rem;
+        left: 59%;
     }
     #customer .customers-icon-group-three {
-        left: 14rem;
-    }*/
+        left: 42%;
+    }
     #testimonial .first-section .quotation-img[data-v-1b29d588] {
         margin-top: 1rem;
         margin-left: 1rem;
@@ -1875,10 +1868,11 @@
     }
     #blog .third-section {
         height: 27%;
+        top: 21rem;
     }
 
     #blog .fourth-section {
-        top: 34rem;
+        top: 42rem;
         height: 48%;
     }
     #category .category-bg {
@@ -1914,8 +1908,59 @@
     #media .project-btn button {
         left: 45%;
     }
+    #testimonial .second-section {
+        left: 62rem;
+    }
 }
 
+@media screen and (max-width: 1536px) {
+    #testimonial .second-section {
+        left: 66rem;
+    }
+    #blog .third-section {
+        top: 23rem;
+    }
+    #blog .fourth-section {
+        top: 34rem;
+    }
+
+    #startProject .spaceman {
+        bottom: 0%;
+    }
+    #blog .fourth-section {
+        top: 46rem;
+    }
+    #contact {
+        top: 10%;
+    }
+}
+@media screen and (max-width: 1440px) {
+    #home .video-text {
+        top: 35rem;
+        right: 42rem;
+    }
+    #customer .customers-icon-group-one {
+        left: 76%;
+    }
+    #customer .customers-icon-group-two {
+        left: 59.5%;
+    }
+    #customer .customers-icon-group-three {
+        left: 43%;
+    }
+    #testimonial .second-section {
+        left: 65rem;
+    }
+    #blog .third-section {
+        top: 22rem;
+    }
+    #blog .fourth-section {
+        top: 44rem;
+    }
+    #startProject .spaceman {
+        bottom: 0%;
+    }
+}
 @media screen and (max-width: 1366px) {
     #home .video-text {
         top: 36rem;
@@ -1944,15 +1989,7 @@
     #caseStudy .row-2 {
         margin-top: 0%;
     }
-    /* #customer .customers-icon-group-one {
-        left: 104rem;
-    }
-    #customer .customers-icon-group-two {
-        left: 37rem;
-    }
-    #customer .customers-icon-group-three {
-        left: 15rem;
-    }*/
+
     #customer .icon-box {
         width: 20rem;
         height: 13rem;
@@ -2003,7 +2040,7 @@
         line-height: 20px;
     }
     #blog .fourth-section {
-        top: 33rem;
+        top: 43rem;
         height: 56%;
     }
     #blog .fourth-section .fourth-section-title {
