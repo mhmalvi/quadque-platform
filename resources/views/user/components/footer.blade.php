@@ -1,7 +1,7 @@
 <div id="footer">
    
         <div class="footer-content">
-                <div class="language">
+               {{--  <div class="language">
                    <span class="en">
                         en
                    </span>
@@ -9,7 +9,7 @@
                         bn
                    </span>
                   
-                </div>
+                </div> --}}
        
 
 

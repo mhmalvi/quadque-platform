@@ -16,10 +16,7 @@ class TerminatingMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        echo '<script>
-                    let screenWidth = screen.width;
-                    document.cookie = "screenWidth="+screenWidth;
-              </script>';
+
         return $next($request);
     }
 }

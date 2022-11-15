@@ -294,7 +294,7 @@
 }
 #home .video-text {
     position: absolute;
-    top: 44rem;
+    top: 30rem;
     right: 50rem;
 }
 #home .video-text h1 {
@@ -305,7 +305,6 @@
     text-transform: capitalize;
     color: #ffffff;
     width: 10rem;
-    height: 18rem;
 }
 #home .video-text a {
     font-weight: 500;
@@ -362,7 +361,7 @@
     width: 100%;
     height: 100%;
     top: 0;
-    background-image: url(/images/category_bg.png);
+    background-image: url(/images/07_BG.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -396,6 +395,20 @@
     letter-spacing: 0.04em;
     text-transform: capitalize;
     color: #ffffff;
+}
+
+#category .category-image {
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#category .category-image img {
+    width: 40%;
 }
 #category .project-btn button {
     background: #8f00ff;
@@ -618,9 +631,9 @@
     color: #ffffff;
 }
 #caseStudy .first-casestudy-section {
-    float: right;
-    width: 65%;
-    text-align: right;
+    position: absolute;
+    top: 16%;
+    left: 35%;
 }
 #caseStudy .first-casestudy-section .first-casestudy-section-content {
     height: 100%;
@@ -640,9 +653,9 @@
 }
 
 #caseStudy .second-casestudy-section {
-    float: right;
-    width: 64%;
-    text-align: right;
+    position: absolute;
+    top: 50%;
+    left: 23.5%;
 }
 #caseStudy .second-casestudy-section ul {
     margin: 0;
@@ -696,6 +709,9 @@
     margin-top: 6%;
     width: 21%;
     overflow: hidden;
+    position: absolute;
+    top: 46%;
+    right: -7%;
 }
 
 /************ testimonial *************/
@@ -1338,7 +1354,7 @@
     height: 100%;
     left: -47px;
     top: 0;
-    background-image: url(/images/mediabuyingbg.png?27c9137651c13ef37b166af5b774987f);
+    background-image: url(/images/07_BG.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -1525,7 +1541,7 @@
     width: 291px;
     height: 44px;
     left: 40%;
-    top: 16%;
+    top: 10%;
     font-weight: 500;
     font-size: 32px;
     line-height: 44px;
@@ -1535,10 +1551,19 @@
 }
 #media .media-bg .media-img {
     position: absolute;
-    width: 582.38px;
-    height: 298px;
-    left: 32%;
-    top: 27%;
+    width: 100%;
+    height: 100%;
+    top: -8%;
+    bottom: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#media .media-bg .media-img canvas {
+    display: block;
+    box-sizing: border-box;
+    height: auto !important;
+    width: 40% !important;
 }
 #media .media-bg p {
     position: absolute;
@@ -1810,7 +1835,7 @@
         margin-left: 1rem;
     }
     #customer .customers-text {
-        top: 30rem;
+        top: 20rem;
     }
     #customer .icon-box {
         width: 20rem;
@@ -1844,9 +1869,7 @@
     #about .about-section {
         width: 45%;
     }
-    #media .media-bg .media-img {
-        left: 32%;
-    }
+
     #blog .second-section {
         height: 27%;
     }
@@ -2001,9 +2024,7 @@
     #media .media-bg h1 {
         font-size: 25px;
     }
-    #media .media-bg .media-img {
-        left: 30%;
-    }
+
     #media .media-bg .media-img img {
         width: 700px;
         height: 350px;
@@ -2038,10 +2059,10 @@
         line-height: 48px;
     }
     #testimonial .client-img img {
-        margin-top: 6rem;
+        margin-top: 14rem;
         margin-left: 7rem;
-        height: 300px;
-        width: 370px;
+        height: 350px;
+        width: 400px;
     }
     #testimonial .second-section {
         left: 58rem;
@@ -2056,7 +2077,7 @@
         font-size: 13px;
         line-height: 23px;
         margin-left: 20px;
-        margin-top: 65px;
+        margin-top: 105px;
         margin-bottom: 45px;
     }
     #testimonial .second-section .client-name {

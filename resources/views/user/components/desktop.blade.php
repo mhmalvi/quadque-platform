@@ -122,6 +122,10 @@
                         </div>
                         <div class="category-bg"></div>
 
+                        <div class="category-image">
+                            <img src="{{ asset('images/06_gfx.png') }}">
+                        </div>
+
                         <h1 class="category-heading">ui/ux</h1>
 
                         <p class="category-details">
@@ -135,22 +139,23 @@
                         <div class="project-menu-list">
                             <ul>
                                 <li>
-                                    <a href="#" onclick="changeCategory(this)" type="ui" class="category_list_active">UI & UX</a>
+                                    <a href="#" onclick="changeCategory(this)" type="ui" id="ui_category" class="category_list_active">UI & UX</a>
+
                                 </li>
                                 <li>
-                                    <a href="#" onclick="changeCategory(this)" type="web">Web Development</a>
+                                    <a href="#" onclick="changeCategory(this)" type="web" id="web_category">Web Development</a>
                                 </li>
                                 <li>
-                                    <a href="#" onclick="changeCategory(this)" type="dm">Digital Marketing</a>
+                                    <a href="#" onclick="changeCategory(this)" type="dm" id="dm_category">Digital Marketing</a>
                                 </li>
                                 <li>
-                                    <a href="#" onclick="changeCategory(this)" type="ad">App Development</a>
+                                    <a href="#" onclick="changeCategory(this)" type="ad" id="ad_category">App Development</a>
                                 </li>
                                 <li>
-                                    <a href="#" onclick="changeCategory(this)" type="ai">AI & IOT Solutions</a>
+                                    <a href="#" onclick="changeCategory(this)" type="ai" id="ai_category">AI & IOT Solutions</a>
                                 </li>
                                 <li>
-                                    <a href="#" onclick="changeCategory(this)" type="sd">Software Development</a>
+                                    <a href="#" onclick="changeCategory(this)" type="sd" id="sd_category">Software Development</a>
                                 </li>
                                
                             </ul>
@@ -328,28 +333,28 @@
                                 </div>
                                 <div class="first-casestudy-section">
                                     <div class="first-casestudy-section-content">
-                                        <ul>
-                                        @isset($caseStudyFirstRows)
-                                                
-                                                @foreach($caseStudyFirstRows as $caseStudyFirstRow)
+                                        <ul class="first-casestudy-section-content-list">
 
-                                                    <li>
-                                                        <div class="case-study-box dji">
-                                                            <div class="case-study-img">
-                                                             <a href="{{ url('desktop/casestudy/details') }}">
- 
-                                                                     <img src="{{ asset('/assets/img/case_study/'.$caseStudyFirstRow->com_image) }} " />
+                                            @isset($caseStudyFirstRows)
+                                                    
+                                                    @foreach($caseStudyFirstRows as $caseStudyFirstRow)
 
-                                                             </a>
-                                                              
+                                                        <li>
+                                                            <div class="case-study-box dji">
+                                                                <div class="case-study-img">
+                                                                <a href="{{ url('desktop/casestudy/details') }}">
+    
+                                                                        <img src="{{ asset('/assets/img/case_study/'.$caseStudyFirstRow->com_image) }} " />
+
+                                                                </a>
+                                                                </div>
+                                                                <div class="case-study-text">
+                                                                    {{ $caseStudyFirstRow->com_name }}
+                                                                </div>
                                                             </div>
-                                                            <div class="case-study-text">
-                                                                {{ $caseStudyFirstRow->com_name }}
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                @endforeach
-                                        @endisset
+                                                        </li>
+                                                    @endforeach
+                                            @endisset
                                         </ul>
                                     </div>
                                 </div>
@@ -357,7 +362,8 @@
                             <div class="row row-2 d-flex justify-content-end">
                                 <div class="second-casestudy-section">
                                     <div class="second-casestudy-section-content">
-                                        <ul>
+                                        <ul class="second-casestudy-section-content-list">
+
                                             @isset($caseStudySecondRows)
                                             @foreach($caseStudySecondRows as $caseStudySecondRow)
                                                 <li>
@@ -428,7 +434,8 @@
                         <div class="media-bg">
                             <h1>our media buying</h1>
                             <div class="media-img">
-                                <img src="{{ asset('assets/img/media.png') }}" />
+                                  <canvas id="myChart"></canvas>
+
                             </div>
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipiscing tempor. Risus
@@ -669,7 +676,7 @@
                 <div class="contact-content">
                     <div class="contact-content-body">
                         <div class="logo">
-                            <img src="{{ asset('assets/img/contact-bg-icon.svg') }}" />
+                            <img id="quadque_logo" rotate='0' src="{{ asset('assets/img/contact-bg-icon.svg') }}" />
                         </div>
                         <h1>Have a Good Web Designe Today</h1>
                         <div class="talk-btn">
@@ -745,5 +752,6 @@
                     </div>
                 </div>
             </section>
-    </div>
+            
+        </div>
  @endsection

@@ -47,7 +47,7 @@ class UserPageController extends Controller
 
 
 
-        $screenWidth = $_COOKIE['screenWidth'];
+
 
         $blogs = [
             'firstBlogId' => $firstBlogId,
@@ -70,12 +70,27 @@ class UserPageController extends Controller
             'fourthBlogThumbnail' => $fourthBlogThumbnail,
         ];
 
-        if ($screenWidth > 428) {
+        echo '<script>
+                    let screenWidth = screen.width;
+                    document.cookie = "screenWidth="+screenWidth;
+              </script>';
 
-            return view('user.components.desktop', compact('caseStudyFirstRows', 'caseStudySecondRows', 'blogs'));
+        if (isset($_COOKIE['screenWidth'])) {
+
+            $screenWidth = $_COOKIE['screenWidth'];
+
+            if ($screenWidth > 428) {
+
+                return view('user.components.desktop', compact('caseStudyFirstRows', 'caseStudySecondRows', 'blogs'));
+            } else {
+
+                return view('user.components.mobile', compact('caseStudyFirstRows', 'caseStudySecondRows', 'blogs'));
+            }
         } else {
 
-            return view('user.components.mobile', compact('caseStudyFirstRows', 'caseStudySecondRows', 'blogs'));
+            echo '<script>
+                   window.location.reload(); 
+              </script>';
         }
     }
 

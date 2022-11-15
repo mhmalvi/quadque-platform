@@ -11,62 +11,88 @@ function changeCategory(domObj) {
         $(".category-details").text(
             ` Outstanding visuals and aesthetic designs to take your brand to the next level.`
         );
-        $(".category-bg").css(
-            "background-image",
-            "url(/images/category_bg.png)"
-        );
+        $(".category-image")
+            .find("img")
+            .attr("src", window.location.origin + "/images/06_gfx.png");
     }
     if (type == "web") {
         $(".category-heading").text("web development");
         $(".category-details").text(
             `Custom web development to represent your business and increase user engagement. `
         );
-        $(".category-bg").css(
-            "background-image",
-            "url(/images/web-development.png)"
-        );
+        $(".category-image")
+            .find("img")
+            .attr("src", window.location.origin + "/images/02_Web.png");
     }
     if (type == "dm") {
         $(".category-heading").text("digital marketing");
         $(".category-details").text(
             `Trending digital strategies to make a powerful and lasting impact on your target market. `
         );
-        $(".category-bg").css(
-            "background-image",
-            "url(/images/digital-marketing.png)"
-        );
+        $(".category-image")
+            .find("img")
+            .attr(
+                "src",
+                window.location.origin + "/images/03_Digital_marketing.png"
+            );
     }
     if (type == "ad") {
         $(".category-heading").text("app development");
         $(".category-details").text(
             `Intuitively designed mobile applications for a more appreciative user interaction.  `
         );
-        $(".category-bg").css(
-            "background-image",
-            "url(/images/app-development.png)"
-        );
+        $(".category-image")
+            .find("img")
+            .attr("src", window.location.origin + "/images/04_App.png");
     }
     if (type == "ai") {
         $(".category-heading").text("ai & iot solutions");
         $(".category-details").text(
             `The latest Artificial Intelligence (AI) and Internet of Things (IOT) solutions for highly precise automation. `
         );
-        $(".category-bg").css(
-            "background-image",
-            "url(/images/ai-iot-solution.png)"
-        );
+        $(".category-image")
+            .find("img")
+            .attr("src", window.location.origin + "/images/05_AI.png");
     }
     if (type == "sd") {
         $(".category-heading").text("software development");
         $(".category-details").text(
             `Customised software packages to put your unique ideas and business dreams into action. `
         );
-        $(".category-bg").css(
-            "background-image",
-            "url(/images/app-development.png)"
-        );
+        $(".category-image")
+            .find("img")
+            .attr("src", window.location.origin + "/images/02_Web.png");
     }
 }
+
+//change the category after 5 second
+let category_num = 1;
+setInterval(function () {
+    if (category_num == 1) {
+        $("#ui_category").trigger("click");
+    }
+    if (category_num == 2) {
+        $("#web_category").trigger("click");
+    }
+    if (category_num == 3) {
+        $("#dm_category").trigger("click");
+    }
+    if (category_num == 4) {
+        $("#ad_category").trigger("click");
+    }
+    if (category_num == 5) {
+        $("#ai_category").trigger("click");
+    }
+    if (category_num == 6) {
+        $("#sd_category").trigger("click");
+    }
+
+    category_num++;
+
+    if (category_num > 6) {
+        category_num = 1;
+    }
+}, 3000);
 
 //change project services option in start project page
 function changeProject(domObj) {
@@ -123,7 +149,6 @@ function showMenuMobile() {
     let menuTop = $(".main-content").scrollTop();
     if (menuTop != 0) {
         $("#mobile-menu").css("top", menuTop - 105);
-        //$(".mob-menu-item").css("margin-top", "15%");
     }
 
     $("#mobile-home").toggleClass("hideOtherSection");
@@ -277,21 +302,35 @@ function seeMoreBlog() {
         })
         .catch((error) => {});
 }
+let caseQueryNum = 0;
 function moreUserCase() {
     $("#caseStudy")
         .find(".case-study-box")
         .css("transition", "all 1s")
         .css("transform", "rotateY(360deg)");
+    $("#caseStudy")
+        .find(".first-casestudy-section")
+        .css("transition", "all 2s");
+    $("#caseStudy").find(".first-casestudy-section").css("left", "100%");
+    $("#caseStudy")
+        .find(".second-casestudy-section")
+        .css("transition", "all 2s");
+    $("#caseStudy").find(".second-casestudy-section").css("left", "-55%");
 
     axios
-        .get("/get/case-study/more/" + this.caseQueryNum)
+        .get("/get/case-study/more/" + caseQueryNum)
         .then((response) => {
-            if (response.data.caseStudyFirstRows.length > 0) {
-                this.caseStudyFirstRows = response.data.caseStudyFirstRows;
+            console.log(response.data);
+            if (response.data.firstRows != " ") {
+                $(".first-casestudy-section-content-list").html(
+                    response.data.firstRows
+                );
             }
 
-            if (response.data.caseStudySecondRows.length > 0) {
-                this.caseStudySecondRows = response.data.caseStudySecondRows;
+            if (response.data.secondRows != " ") {
+                $(".second-casestudy-section-content-list").html(
+                    response.data.secondRows
+                );
             }
 
             this.caseQueryNum++;
@@ -304,13 +343,13 @@ function moreUserCase() {
             .css("transition", "all 2s")
             .css("transform", "rotateY(0deg)");
         $("#caseStudy")
-            .find(".first-casestudy-section-content")
-            .css("transition", "margin 2s")
-            .css("margin-right", "0%");
+            .find(".first-casestudy-section")
+            .css("transition", "all 2s");
+        $("#caseStudy").find(".first-casestudy-section").css("left", "35%");
         $("#caseStudy")
-            .find(".second-casestudy-section-content")
-            .css("transition", "margin 2s")
-            .css("margin-left", "0%");
+            .find(".second-casestudy-section")
+            .css("transition", "all 2s");
+        $("#caseStudy").find(".second-casestudy-section").css("left", "23.5%");
     }, 2000);
 }
 
