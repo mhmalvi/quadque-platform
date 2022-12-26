@@ -75,7 +75,7 @@ export default {
   methods: {
     login() {
       axios
-        .post("/admin/login/check", this.admin)
+        .post("/admin/login", this.admin)
         .then((response) => {
           if (response.data.fail) {
             this.fail = response.data.fail;

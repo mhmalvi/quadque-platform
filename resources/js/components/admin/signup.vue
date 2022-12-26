@@ -101,7 +101,7 @@ export default {
   methods: {
     signup() {
       axios
-        .post("/admin/signup/store", this.admin)
+        .post("/register", this.admin)
         .then((response) => {
           this.success = response.data.success;
         })
@@ -130,6 +130,37 @@ export default {
           }
         });
     },
+    // signup() {
+    //   axios
+    //     .post("/admin/signup/store", this.admin)
+    //     .then((response) => {
+    //       this.success = response.data.success;
+    //     })
+    //     .catch((error) => {
+    //       if (error.response.data.errors.name) {
+    //         this.nameError = error.response.data.errors.name[0];
+    //       } else {
+    //         this.nameError = "";
+    //       }
+
+    //       if (error.response.data.errors.email) {
+    //         this.emailError = error.response.data.errors.email[0];
+    //       } else {
+    //         this.emailError = "";
+    //       }
+    //       if (error.response.data.errors.password) {
+    //         this.passwordError = error.response.data.errors.password[0];
+    //       } else {
+    //         this.passwordError = "";
+    //       }
+    //       if (error.response.data.errors.password) {
+    //         this.passwordConfirmError =
+    //           error.response.data.errors.password_confirmation[0];
+    //       } else {
+    //         this.passwordConfirmError = "";
+    //       }
+    //     });
+    // },
   },
 };
 </script>
