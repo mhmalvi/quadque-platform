@@ -1,3 +1,6 @@
+<!-- repo-card -->
+![quadque-platform](docs/assets/social-card.png)
+
 # Quadque Platform
 
 An earlier iteration of the **Quadque Technologies** digital platform. This Laravel 8 application served as the foundational platform layer, providing core web services, user management, and content delivery before the architecture evolved into the current modular ecosystem.
